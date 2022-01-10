@@ -1,7 +1,10 @@
-import React from "react";
+import { NavMenuIconLink } from './NavIconLink';
+
+// Icons
+import { BsGithub, BsLinkedin } from 'react-icons/bs';
 
 // Styles
-import { Wrapper, NavUnorderedList, NavMenu, StyledNavLink } from './Navbar.styles';
+import { Wrapper, NavUnorderedList, NavMenu, StyledNavLink, NavIconLinkContainer } from './Navbar.styles';
 
 export const Navbar = () => {
     const scrollToElement = (targetElement: string) => {
@@ -10,12 +13,13 @@ export const Navbar = () => {
 
     return (
         <Wrapper>
-            {/* <StyledLogoLink to="/">
-                <Logo><GiRock /><FaRegHandPaper /><GiScissors /></Logo>
-            </StyledLogoLink>            */}
+            <NavIconLinkContainer>
+                <NavMenuIconLink href="https://github.com/antondru" target="_blank" rel="noopener noreferrer" icon={<BsGithub />} />
+                <NavMenuIconLink href="https://www.linkedin.com/in/anton-drugge-90304a83/" target="_blank" rel="noopener noreferrer" icon={<BsLinkedin />} />
+            </NavIconLinkContainer>
             <NavMenu className="navbar">
                 <NavUnorderedList>
-                    <div className="nav-menu" style={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
+                    <div className="nav-menu">
                         <li id="info" data-ref="info">
                             <StyledNavLink onClick={() => {scrollToElement("info")}}>Info</StyledNavLink>
                         </li>

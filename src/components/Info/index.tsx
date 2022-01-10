@@ -20,8 +20,8 @@ export const Info = () => {
         You can also <StyledLink onClick={() => {scrollToElement("contact")}}>contact</StyledLink> me by sending a message!
       </StyledText>
       <div className="iconContainer">
-        <IconLink icon={<FiGithub />} href="https://github.com/antondru" target="_blank" rel="noopener noreferrer" desc="GitHub"></IconLink>
-        <IconLink icon={<FiLinkedin />} href="https://www.linkedin.com/in/anton-drugge-90304a83/" target="_blank" rel="noopener noreferrer" desc="LinkedIn"></IconLink>
+        <IconLink icon={<FiGithub />} href="https://github.com/antondru" target="_blank" rel="noopener noreferrer" desc="GitHub" />
+        <IconLink icon={<FiLinkedin />} href="https://www.linkedin.com/in/anton-drugge-90304a83/" target="_blank" rel="noopener noreferrer" desc="LinkedIn" />
       </div>
     </div>
   );
