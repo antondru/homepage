@@ -17,7 +17,7 @@ export const StyledIconLink = styled.a`
 
 export const DescriptionText = styled.p`
     font-size: 0.8em;
-    color: #c4c4c4;
+    color: #E4E6EB;
 
     @media (max-width: 640px) {
         font-size: 0.7em;

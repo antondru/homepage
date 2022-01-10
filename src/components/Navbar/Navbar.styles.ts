@@ -2,64 +2,96 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: center;
   position: sticky;
   position: -webkit-sticky; /* Safari */
   overflow: hidden;
   bottom: 0;
   z-index: 999;
   width: 100%;
-  height: 2vh;
-  min-height: 50px;
-  background-color: #171717;
+  height: 4vh;
+  background-color: #1c1c1c; // #1c1c1c
   align-items: center;
-  padding: auto 0;
+  padding: 0;
 
-  /* TODO: FOR MEMES */
   @media screen and (max-width: 640px) {
-    /* flex-direction: column; */
-    width: 100%;
     justify-content: center;
-    font-size: 5px;
+    width: 100%;
+    height: 5vh;
+    background-color: #171717;
   }
 `;
 
-// export const StyledLogoLink = styled(NavLink)`
-//   text-decoration: none;
-// `;
-
-// export const Logo = styled.h1`
-//   color: var(--aquamarine);
-//   font-family: 'Bangers', cursive;
-//   letter-spacing: 0.3rem;
-//   display: flex;
-//   justify-content: flex-start;
-//   font-size: 3em;
-//   text-shadow: 0 0 20px var(--aquamarine);
-
-//   &:hover {
-//     text-shadow: 0 0 50px var(--aquamarine);
-//     transition: 0.5s ease-in-out;
-//   }
-// `;
-
 export const NavMenu = styled.nav`
-  display: flex;
-  margin: 0 auto;
-  justify-content: flex-end;
+  /* display: flex; */
+  margin: 0;
+  /* text-align: center; */
 `;
 
 export const NavUnorderedList = styled.ul`
-  display: flex;
+  display: inline-block; // TODO: rätt?
   flex-direction: row;
-  list-style-type: none;
-  margin-right: 3em;
-  color: white;
+  list-style: none;
+  color: #E4E6EB;
+  cursor: pointer;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 200;
+  font-size: 1em;
+  /* align-items: center;
+  justify-content: center; */
+  padding-left: 0px;
+
+  .active {
+    font-weight: 800;
+    color: #bca26c;
+    text-shadow: 0 0 2px #bca26c;
+  }
 
   li {
+    display: inline-block;
+    text-align: center;
+    width: auto;
+    border-right: 4px solid #bca26c;
     text-transform: uppercase;
-    margin: 0 10px;
-    letter-spacing: 0.2rem;
+    padding-right: 20px;
+    padding-left: 20px;
+    letter-spacing: 0.3rem;
+
+    &:last-child {
+      border-right: none;
+      padding-right: none;
+    }
+
+    @media screen and (max-width: 640px) {
+      border-right: 1px solid #bca26c;
+    }
+
+  }
+
+  @media screen and (max-width: 640px) {
+    justify-content: center;
+    width: 100%;
+    padding-left: 0px;
+    font-size: 0.8em;
+  }
+`;
+
+export const StyledNavLink = styled.a`
+  text-decoration: none;
+
+  &:hover {
+    color: #bca26c;
+    text-shadow: 0 0 5px #bca26c;
+    animation: fadeIn 1s;
+  
+    @keyframes fadeIn {
+    from {
+      color: #E4E6EB;
+    }
+    to {
+      color: #bca26c;
+    } */
   }
 `;
 
