@@ -1,4 +1,5 @@
 import { BlinkingLetter } from "./BlinkingLetter";
+import { SectionHeader } from "./PageSection.styles";
 
 type Props = {
   title: string,
@@ -9,7 +10,7 @@ type Props = {
 const PageSection: React.FC<Props> = ({ title, id, children } : Props): JSX.Element => {
   return (
     <section className="pageSection" id={id}>
-      <h1><span style={{color: "#bca26c"}}>/</span>{title}<BlinkingLetter>/</BlinkingLetter></h1>
+      <SectionHeader><span style={{color: "#bca26c"}}>/</span>{title}<BlinkingLetter>/</BlinkingLetter></SectionHeader>
       {children}
     </section>
   );

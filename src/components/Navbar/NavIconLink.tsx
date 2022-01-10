@@ -1,5 +1,4 @@
 import { IconBaseProps } from "react-icons";
-import styled from "styled-components";
 import { NavIconLink } from "./Navbar.styles";
 
 type NavIconLinkProps = {

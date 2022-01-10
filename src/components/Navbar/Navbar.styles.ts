@@ -57,13 +57,14 @@ export const NavUnorderedList = styled.ul`
   list-style: none;
   color: #E4E6EB;
   cursor: pointer;
-  font-family: 'Roboto Mono', monospace;
-  font-weight: 200;
+  /* font-family: 'Roboto Mono', monospace; */
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
   font-size: 1em;
   padding-left: 0px;
 
   .active {
-    font-weight: 800;
+    font-weight: 1000;
     color: #bca26c;
     text-shadow: 0 0 1px #bca26c;
   }
@@ -76,7 +77,7 @@ export const NavUnorderedList = styled.ul`
     text-transform: uppercase;
     padding-right: 20px;
     padding-left: 20px;
-    letter-spacing: 0.3rem;
+    letter-spacing: 0.2rem;
 
     &:last-child {
       border-right: none;

@@ -121,15 +121,12 @@ p {
   margin: 0;
 }
 
-h1 {
+/* h1 {
   letter-spacing: 0.1em;
   font-size: 4em;
-  /* font-family: 'Secular One', sans-serif; */
-  /* font-family: 'Bebas Neue', cursive; */
   font-family: 'Londrina Solid', cursive;
-  /* color: #c4c4c4; */
   color: #E4E6EB;
-}
+} */
 
 /* for mobile devices */
 @media (max-width: 640px) {

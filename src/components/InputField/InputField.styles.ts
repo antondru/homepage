@@ -23,6 +23,7 @@ export const StyledInput = styled.input`
 `;
 
 export const StyledLabel = styled.label`
+  font-family: 'Open Sans', sans-serif;
   color: #bca26c;
   font-size: 0.9em;
   width: 50px;
