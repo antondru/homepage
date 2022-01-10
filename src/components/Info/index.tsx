@@ -5,7 +5,7 @@ import IconLink from "../IconLink";
 
 export const Info = () => {
   const scrollToElement = (targetElement: string) => {
-    document.getElementById(targetElement)?.scrollIntoView();
+    document.getElementById(targetElement)?.scrollIntoView({behavior: "smooth"});
   }
   
   return (

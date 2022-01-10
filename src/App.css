@@ -2,12 +2,13 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  gap: 30vh;
   width: 100%;
 }
 
 .pageSection {
   width: 50vw;
-  height: 100vh;
+  height: 96vh; /* 100 */
   transform: translateX(500px);
   opacity: 0;
   transition: 500ms;
@@ -127,7 +128,7 @@ h1 {
   /* font-family: 'Bebas Neue', cursive; */
   font-family: 'Londrina Solid', cursive;
   /* color: #c4c4c4; */
-  color: #FFFFFF;
+  color: #E4E6EB;
 }
 
 /* for mobile devices */
@@ -137,7 +138,7 @@ h1 {
   }
 
   .pageSection {
-    transform: translateX(100px);
+    transform: translateX(50px);
     opacity: 0;
     transition: 500ms;
   }
