@@ -54,6 +54,7 @@ export const NavUnorderedList = styled.ul`
   flex-direction: row;
   list-style-type: none;
   margin-right: 3em;
+  color: white;
 
   li {
     text-transform: uppercase;
