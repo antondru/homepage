@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const StyledText = styled.p`
   color: #ffffff;
   font-family: 'Open Sans', sans-serif;
-  font-size: 1em;
+  font-size: 0.9em;
   font-weight: 300;
 
   @media screen and (max-width: 640px) {

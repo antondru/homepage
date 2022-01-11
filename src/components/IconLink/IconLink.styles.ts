@@ -16,7 +16,7 @@ export const StyledIconLink = styled.a`
 `;
 
 export const DescriptionText = styled.p`
-    font-size: 0.8em;
+    font-size: 0.7em;
     color: #E4E6EB;
     font-family: 'Open Sans', sans-serif;
 

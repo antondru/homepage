@@ -8,7 +8,11 @@ export const SectionHeader = styled.h1`
 
   // TODO: effekter på rubrik...
   &:hover {
-        filter: drop-shadow(0 0 5px #bca26c);
-        transition: 0.5s ease-in-out;
+        /* filter: drop-shadow(0 0 5px #bca26c);
+        transition: 0.5s ease-in-out; */
     }
+
+  @media (max-width: 640px) {
+    font-size: 2.2rem;
+  }
 `;
