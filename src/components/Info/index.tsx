@@ -11,7 +11,7 @@ export const Info = () => {
   return (
     <div className="infoContainer">
       <StyledText>
-        Hi, I'm Anton! On this page, you can see some of my <StyledLink onClick={() => {scrollToElement("projects")}}>projects</StyledLink>.
+        Hi, I'm Anton and I live in Luleå, Sweden! On this page, you can see some of my <StyledLink onClick={() => {scrollToElement("projects")}}>projects</StyledLink>. Right now, it isn't much to see though ;)
         <br />
         If you want to, you can visit my <StyledLink href="https://github.com/antondru" target="_blank" rel="noopener noreferrer"> GitHub</StyledLink> or drop me a message on 
         <StyledLink href="https://www.linkedin.com/in/anton-drugge-90304a83/" target="_blank" rel="noopener noreferrer"> LinkedIn</StyledLink>!

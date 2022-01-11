@@ -12,8 +12,8 @@ export const StyledInput = styled.input`
 
   &:focus {
     outline: none;
-    border-color: #bca26c;
-    box-shadow: 0 0 1px #bca26c;
+    border-color: #08fdd8;
+    box-shadow: 0 0 1px #08fdd8;
     transition: border-color 0.5s ease-in-out;
   }
 
@@ -25,8 +25,8 @@ export const StyledInput = styled.input`
 
 export const StyledLabel = styled.label`
   font-family: 'Open Sans', sans-serif;
-  color: #bca26c;
-  font-size: 0.9em;
+  color: #08fdd8;
+  font-size: 0.7em;
   width: 50px;
 
   @media screen and (max-width: 1024px) {

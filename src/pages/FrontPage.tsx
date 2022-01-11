@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import  PageSection from "../components/PageSection";
 import { Contact } from "../components/Contact";
 import { Projects } from "../components/Projects";
@@ -18,6 +18,7 @@ export const FrontPage = () => {
       })
     }, {
       threshold: 0.8, 
+      // rootMargin: '10px 10px -100px 10px'
     })
 
     sections.forEach(section => {

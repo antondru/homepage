@@ -13,8 +13,8 @@ export const StyledTextArea = styled.textarea`
 
     &:focus {
         outline: none;
-        border-color: #bca26c;
-        box-shadow: 0 0 1px #bca26c;
+        border-color: #08fdd8;
+        box-shadow: 0 0 1px #08fdd8;
         transition: border-color 0.5s ease-in-out;
     }
 

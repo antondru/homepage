@@ -13,10 +13,6 @@ export const Navbar = () => {
 
     return (
         <Wrapper>
-            <NavIconLinkContainer>
-                <NavMenuIconLink href="https://github.com/antondru" target="_blank" rel="noopener noreferrer" icon={<BsGithub />} />
-                <NavMenuIconLink href="https://www.linkedin.com/in/anton-drugge-90304a83/" target="_blank" rel="noopener noreferrer" icon={<BsLinkedin />} />
-            </NavIconLinkContainer>
             <NavMenu className="navbar">
                 <NavUnorderedList>
                     <div className="nav-menu">
@@ -32,6 +28,10 @@ export const Navbar = () => {
                     </div>    
                 </NavUnorderedList>
             </NavMenu>
+            <NavIconLinkContainer>
+                <NavMenuIconLink href="https://github.com/antondru" target="_blank" rel="noopener noreferrer" icon={<BsGithub />} />
+                <NavMenuIconLink href="https://www.linkedin.com/in/anton-drugge-90304a83/" target="_blank" rel="noopener noreferrer" icon={<BsLinkedin />} />
+            </NavIconLinkContainer>
         </Wrapper>
     );
 }

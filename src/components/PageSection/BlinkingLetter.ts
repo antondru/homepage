@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const BlinkingLetter = styled.span`
-    color: #bca26c;
+    color: #FD2155;
     animation: animate 0.7s linear infinite;
-    text-shadow: 0 0 5px #bca26c;
+    text-shadow: 0 0 5px #FD2155;
 
     @keyframes animate {
         0% {
