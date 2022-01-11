@@ -16,7 +16,7 @@
 }
 
 .pageSection.show {
-  transform: translateX(0px);
+  transform: translateX(-200px);
   opacity: 1;
 }
 
@@ -134,6 +134,11 @@ p {
     transform: translateX(50px);
     opacity: 0;
     transition: 500ms;
+  }
+
+  .pageSection.show {
+    transform: translateX(-20px); /* TODO: Doesn't really center correctly, band-aid fix. Im not sure if it even centers correctly on web. This looks better on mobile tho. */
+    opacity: 1;
   }
 
   .iconContainer {
