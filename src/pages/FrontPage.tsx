@@ -17,7 +17,7 @@ export const FrontPage = () => {
         handleNavBar(entry);
       })
     }, {
-      threshold: 0.5, // tidigare 0.5
+      threshold: 0.5, 
     })
 
     sections.forEach(section => {
@@ -40,7 +40,6 @@ export const FrontPage = () => {
 
   return (
   <>
-    
     <div id="sectionContainer">
       <PageSection title="HELLO" id="info">
         <Info />

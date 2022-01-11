@@ -3,11 +3,11 @@
   align-items: center;
   flex-direction: column;
   gap: 30vh;
-  width: 100%;
+  width: 98%; /* width 100% causes horizontal scrollbar, probably some margin or padding somewhere screwing it up, will have to look further into it */
 }
 
 .pageSection {
-  width: 50vw;
+  width: 50%;
   height: 96vh; /* 100 */
   transform: translateX(500px);
   opacity: 0;
@@ -115,6 +115,8 @@
 html, body {
   background: #1c1e21;
   margin: 0 auto;
+  padding: 0;
+  /* overflow-x: hidden; */
 }
 
 p {

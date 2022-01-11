@@ -10,11 +10,12 @@ export const Wrapper = styled.div`
   bottom: 0;
   z-index: 999;
   width: 100%;
-  height: 4vh;
+  height: 5vh;
   background-color: #1c1e21; 
   align-items: center;
   padding: 0;
-  padding-bottom: 1em;
+  /* padding: 0 1.5em 0.5em; */
+  /* padding-bottom: 1em; */
 
   @media screen and (max-width: 640px) {
     justify-content: center; 
@@ -27,9 +28,8 @@ export const Wrapper = styled.div`
 export const NavIconLinkContainer = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 1.5em;
-  margin-left: 2em;
-
+  gap: 1em;
+  padding-left: 1.5em;
   @media screen and (max-width: 640px) {
     display: none;
   }
@@ -38,7 +38,7 @@ export const NavIconLinkContainer = styled.div`
 export const NavIconLink = styled.a`
   text-decoration: none;
   color: #E4E6EB;
-  font-size: 2em;
+  font-size: 1.5em;
 
   &:hover {
         color: #bca26c;
@@ -53,15 +53,14 @@ export const NavMenu = styled.nav`
 
 export const NavUnorderedList = styled.ul`
   display: inline-block; 
-  flex-direction: row;
+  /* flex-direction: row; */
   list-style: none;
   color: #E4E6EB;
   cursor: pointer;
-  /* font-family: 'Roboto Mono', monospace; */
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
-  font-size: 1em;
-  padding-left: 0px;
+  font-size: 0.8em;
+  padding: 0;
 
   .active {
     font-weight: 1000;
@@ -81,7 +80,7 @@ export const NavUnorderedList = styled.ul`
 
     &:last-child {
       border-right: none;
-      padding-right: none;
+      /* padding-right: none; */
     }
 
     @media screen and (max-width: 640px) {
@@ -115,26 +114,3 @@ export const StyledNavLink = styled.a`
     } */
   }
 `;
-
-// export const StyledNavLink = styled(NavLink)`
-//   text-decoration: none;
-//   font-size: 1.5rem;
-//   font-weight: 400;
-//   color: var(--lightGrey);
-
-//   &.active {
-//     font-weight: 800;
-//     color: var(--aquamarine);
-//     border-bottom: solid 1px var(--lightGrey);
-//     text-shadow: 0 0 30px var(--aquamarine);
-//     transition: 0.5s ease-in-out;
-//   }
-
-//   &:hover {
-//     text-shadow: 0 0 30px var(--white);
-//     color: var(--white);
-//   }
-//   @media screen and (max-width: 640px) {
-//     font-size: 3em;
-//   }
-// `;
