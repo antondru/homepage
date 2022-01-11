@@ -17,9 +17,10 @@ export const StyledInput = styled.input`
     transition: border-color 0.5s ease-in-out;
   }
 
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 1024px) {
     width: 100%;
   }
+
 `;
 
 export const StyledLabel = styled.label`
@@ -28,7 +29,7 @@ export const StyledLabel = styled.label`
   font-size: 0.9em;
   width: 50px;
 
-  @media screen and (max-width: 640px) {
-    font-size: 0.8em;
+  @media screen and (max-width: 1024px) {
+    font-size: 0.7em;
   }
 `;

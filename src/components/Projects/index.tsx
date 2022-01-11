@@ -5,7 +5,7 @@ export const Projects = () => {
   return (
     <div className="projectsContainer">
       <StyledText>
-        In time, I might add some cool stuff I've done here...
+        In time, I might add some stuff I've done here...
       </StyledText>
     </div>
   );

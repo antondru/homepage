@@ -12,7 +12,7 @@ export const SectionHeader = styled.h1`
         transition: 0.5s ease-in-out; */
     }
 
-  @media (max-width: 640px) {
+  @media (max-width: 1024px) {
     font-size: 2.2rem;
   }
 `;

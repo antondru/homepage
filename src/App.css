@@ -1,10 +1,9 @@
-#sectionContainer {
+/* #sectionContainer {
   display: flex;
   align-items: center;
   flex-direction: column;
   gap: 30vh;
   width: 98%; /* width 100% causes horizontal scrollbar, probably some margin or padding somewhere screwing it up, will have to look further into it */
-}
 
 .pageSection {
   width: 50%;
@@ -12,6 +11,12 @@
   transform: translateX(500px);
   opacity: 0;
   transition: 500ms;
+}
+
+.contentDiv {
+  width: 100%;
+  padding-top: 2em;
+  padding-left: 8em;
 }
 
 .pageSection.show {
@@ -123,18 +128,17 @@ p {
   margin: 0;
 }
 
-/* h1 {
-  letter-spacing: 0.1em;
-  font-size: 4em;
-  font-family: 'Londrina Solid', cursive;
-  color: #E4E6EB;
-} */
-
 /* for mobile devices */
-@media (max-width: 640px) {
-  /* h1 {
-      font-size: 2.2rem;
-  } */
+@media (max-width: 1024px) {
+  .contentDiv {
+    padding-top: 0.5em;
+    padding-left: 4em;
+    width: 100%;
+  }
+
+  .contactForm {
+    gap: 0.7em;
+  }
 
   .pageSection {
     transform: translateX(50px);
@@ -177,8 +181,40 @@ p {
   .errorMessageContainerMessageField {
     font-size: 12px;
     height: 20px;
-    margin-bottom: 1em;
+    margin-bottom: 0em;
   }
-
 }
 
+@media (max-width: 320px) {
+  .pageSection {
+    transform: translateX(10px);
+    transition: 500ms;
+  }
+
+  .contactForm {
+    gap: 0.7em;
+  }
+
+  #contactContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .contentDiv {
+    padding-top: 0.5em;
+    padding-left: 2em;
+    width: 100%;
+  }
+
+  .errorMessageContainerInputField {
+    font-size: 10px;
+    height: 18px;
+  }
+
+  .errorMessageContainerMessageField {
+    font-size: 10px;
+    height: 18px;
+    margin-bottom: 0em;
+  }
+}

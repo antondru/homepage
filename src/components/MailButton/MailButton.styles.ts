@@ -24,8 +24,13 @@ export const StyledMailButton = styled.button<Props>`
         transition: 0.5s ease-in-out;
     }
 
-    @media screen and (max-width: 640px) {
+    @media screen and (max-width: 1024px) {
         padding: 10px;
+        font-size: 12px;
+    }
+
+    @media screen and (max-width: 320px) {
+        padding: 4px;
         font-size: 12px;
     }
 `;

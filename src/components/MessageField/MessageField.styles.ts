@@ -18,8 +18,8 @@ export const StyledTextArea = styled.textarea`
         transition: border-color 0.5s ease-in-out;
     }
 
-    @media screen and (max-width: 640px) {
-    height: 100px;
+    @media screen and (max-width: 1024px) {
+        height: 100px;
     }
 `;
 
@@ -27,7 +27,7 @@ export const CharacterCountDiv = styled.div`
     color: #c4c4c4;
     font-size: 0.8em;
 
-    @media screen and (max-width: 640px) {
+    @media screen and (max-width: 1024) {
     font-size: 0.6em;
     }
 `;
