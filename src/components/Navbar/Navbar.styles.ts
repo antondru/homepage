@@ -21,6 +21,10 @@ export const Wrapper = styled.div`
     background-color: #141517;
     padding-bottom: 0;
   }
+
+  @media screen and (max-width: 250px) {
+    display: none;
+  }
 `;
 
 export const NavIconLinkContainer = styled.div`

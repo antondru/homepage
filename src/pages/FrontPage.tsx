@@ -40,17 +40,15 @@ export const FrontPage = () => {
 
   return (
   <>
-    {/* <div id="sectionContainer"> */}
-      <PageSection title="HELLO" id="info">
-        <Info />
-      </PageSection>
-      <PageSection title="PROJECTS" id="projects">
-        <Projects />
-      </PageSection>
-      <PageSection title="CONTACT" id="contact">
-        <Contact />
-      </PageSection>
-    {/* </div>  */}
+    <PageSection title="HELLO" id="info">
+      <Info />
+    </PageSection>
+    <PageSection title="PROJECTS" id="projects">
+      <Projects />
+    </PageSection>
+    <PageSection title="CONTACT" id="contact">
+      <Contact />
+    </PageSection>
     <Navbar /> 
   </>
   );
