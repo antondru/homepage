@@ -1,8 +1,21 @@
 import styled from "styled-components";
 
+export const Img = styled.img`
+    height: 150px;
+    width: 150px;
+    border: 2px solid #FD2155;
+    border-radius: 50%;
+
+    @media (max-width: 640px) {
+        height: 75px;
+        width: 75px;
+    }
+`;
+
 export const InfoContainer = styled.div`
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     gap: 2em;
 
     @media (max-width: 640px) {
@@ -32,13 +45,5 @@ export const IconContainer = styled.div`
 `;
 
 export const ImageContainer = styled.div`
-    height: 150px;
-    width: 150px;
-    border: 2px solid #FD2155;
-    border-radius: 50%;
 
-    @media (max-width: 640px) {
-        height: 75px;
-        width: 75px;
-    }
 `;

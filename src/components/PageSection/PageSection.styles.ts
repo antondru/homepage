@@ -15,6 +15,10 @@ export const SectionHeader = styled.h1`
   @media (max-width: 1024px) {
     font-size: 3em;
   }
+
+  @media (max-width: 640px) {
+    font-size: 2.5em;
+  }
 `;
 
 export const ContentDiv = styled.div`
