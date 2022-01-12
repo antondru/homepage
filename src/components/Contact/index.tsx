@@ -11,7 +11,7 @@ import {
   EMAILJS_SERVICEID
 } from '../../config';
 
-import { ContactContainer, ContactForm, ContactInfoText, ErrorMsgContainerInputField, ErrorMsgContainerMessageField, InputContainer } from "./Contact.styles";
+import { ButtonContainer, ContactContainer, ContactForm, ContactInfoText, ErrorMsgContainerInputField, ErrorMsgContainerMessageField, InputContainer } from "./Contact.styles";
 
 type InputFieldValues = {
   from_name: string
@@ -209,7 +209,9 @@ export const Contact = (): JSX.Element => {
         <ErrorMsgContainerMessageField className="error-message-container-message-field">
           {errorHandler.isError && wasTargeted.messageFieldTargeted && !errorHandler.messageValid ? <ErrorMessage>* Message needs to be atleast 4 characters!</ErrorMessage> : ''}
         </ErrorMsgContainerMessageField>
-        <MailButton disabled={!errorHandler.nameValid || !errorHandler.emailValid || !errorHandler.messageValid} type='submit' desc='SEND MESSAGE'></MailButton>
+        <ButtonContainer className="button-container">
+          <MailButton disabled={!errorHandler.nameValid || !errorHandler.emailValid || !errorHandler.messageValid} type='submit' desc='SEND'></MailButton>
+        </ButtonContainer>
       </ContactForm>
     </ContactContainer>
   );

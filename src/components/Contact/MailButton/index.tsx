@@ -9,10 +9,8 @@ type Props = {
 
 export const MailButton = ({ type, desc, disabled } : Props) => {
   return (
-    <div className="button">
       <StyledMailButton disabled={disabled} type={type}> 
         {desc}
       </StyledMailButton>
-    </div>
   );
 };

@@ -31,6 +31,11 @@ export const InputContainer = styled.div`
   }
 `;
 
+/* container for button */
+export const ButtonContainer = styled.div`
+  width: 100%;
+`;
+
 /* form */
 export const ContactForm = styled.form`
     display: flex;

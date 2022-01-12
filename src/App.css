@@ -18,12 +18,6 @@
   display: none;
 }
 
-
-.button {
-  display: flex;
-  flex-direction: row;
-}
-
 html, body {
   background: #1c1e21;
   margin: 0 auto;
