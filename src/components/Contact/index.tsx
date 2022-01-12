@@ -1,16 +1,17 @@
 import { send } from "emailjs-com";
 import React, { useState } from "react";
 import { ErrorMessage, StyledText } from "../../pages/Pages.styles";
-import Input from "../InputField";
-import { MailButton } from "../MailButton";
-import { MessageField } from "../MessageField";
+import Input from "./InputField";
+import { MailButton } from "./MailButton";
+import { MessageField } from "./MessageField";
 
 import {
   EMAILJS_USERID,
   EMAILJS_TEMPLATEID,
   EMAILJS_SERVICEID
 } from '../../config';
-import { ContactContainer, ContactForm, ContactInfoText, ErrorMsgContainerInputField, ErrorMsgContainerMessageField, InputDiv } from "./Contact.styles";
+
+import { ContactContainer, ContactForm, ContactInfoText, ErrorMsgContainerInputField, ErrorMsgContainerMessageField, InputContainer } from "./Contact.styles";
 
 type InputFieldValues = {
   from_name: string
@@ -123,11 +124,11 @@ export const Contact = (): JSX.Element => {
   }
 
   return (
-    <ContactContainer id="contactContainer">
-      <ContactInfoText className="contactInfoText">
+    <ContactContainer id="contact-container">
+      <ContactInfoText className="contact-info-text-container">
         <StyledText>Send me a message!</StyledText>
       </ContactInfoText>
-       <ContactForm className="contactForm" onSubmit={onSubmit}>
+       <ContactForm className="contact-form" onSubmit={onSubmit}>
         {/* this field shouldnt be filled out - not really sure how well this works */}
         <input type='text' 
         id="phone"
@@ -135,7 +136,7 @@ export const Contact = (): JSX.Element => {
           validateRandomField(e.target.value);
           }}
         /> 
-        <InputDiv className="inputDiv"> 
+        <InputContainer className="input-container"> 
           <Input
             label="Name:"
             id="nameField"
@@ -155,11 +156,11 @@ export const Contact = (): JSX.Element => {
               }
             }}
           />
-          <ErrorMsgContainerInputField className="errorMessageContainerInputField">
+          <ErrorMsgContainerInputField className="error-message-container-input-field">
             {errorHandler.isError && wasTargeted.nameFieldTargeted && !errorHandler.nameValid ? <ErrorMessage>* Name needs to be atleast two characters!</ErrorMessage> : ''}
           </ErrorMsgContainerInputField>
-        </InputDiv>
-        <InputDiv className="inputDiv">
+        </InputContainer>
+        <InputContainer className="input-container">
           <Input
             label="Email:"
             id="emailField"
@@ -179,10 +180,10 @@ export const Contact = (): JSX.Element => {
               }
             }}
           />
-          <ErrorMsgContainerInputField className="errorMessageContainerInputField">
+          <ErrorMsgContainerInputField className="error-message-container-input-field">
             {errorHandler.isError && wasTargeted.emailFieldTargeted && !errorHandler.emailValid ? <ErrorMessage>* Please enter a valid email address!</ErrorMessage> : ''}
           </ErrorMsgContainerInputField>
-        </InputDiv>
+        </InputContainer>
         <MessageField
           label="Message:" 
           id="messageField"
@@ -205,7 +206,7 @@ export const Contact = (): JSX.Element => {
           }}
           characterCount={characterCount}
         />
-        <ErrorMsgContainerMessageField className="errorMessageContainerMessageField">
+        <ErrorMsgContainerMessageField className="error-message-container-message-field">
           {errorHandler.isError && wasTargeted.messageFieldTargeted && !errorHandler.messageValid ? <ErrorMessage>* Message needs to be atleast 4 characters!</ErrorMessage> : ''}
         </ErrorMsgContainerMessageField>
         <MailButton disabled={!errorHandler.nameValid || !errorHandler.emailValid || !errorHandler.messageValid} type='submit' desc='SEND MESSAGE'></MailButton>

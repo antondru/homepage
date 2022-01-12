@@ -5,7 +5,7 @@ import { ProjectsContainer } from "./Projects.styles";
 
 export const Projects = () => {
   return (
-    <ProjectsContainer className="projectsContainer">
+    <ProjectsContainer className="projects-container">
       <SubHeader>My Projects<span style={{ color: "#FD2155" }}>.</span></SubHeader>
       <StyledText>
         In time, I might add some stuff I've done here...

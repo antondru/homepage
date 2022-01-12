@@ -8,7 +8,7 @@ import { Navbar } from "../components/Navbar";
 export const FrontPage = () => {
 
   useEffect(() => {
-    const sections = document.querySelectorAll(".pageSection")
+    const sections = document.querySelectorAll(".page-section")
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         entry.target.classList.toggle("show", entry.isIntersecting);
@@ -18,7 +18,6 @@ export const FrontPage = () => {
       })
     }, {
       threshold: 0.8, 
-      // rootMargin: '10px 10px -100px 10px'
     })
 
     sections.forEach(section => {
@@ -41,13 +40,13 @@ export const FrontPage = () => {
 
   return (
   <>
-    <PageSection title="INFO" id="info">
+    <PageSection title="info" id="info">
       <Info />
     </PageSection>
-    <PageSection title="PROJECTS" id="projects">
+    <PageSection title="projects" id="projects">
       <Projects />
     </PageSection>
-    <PageSection title="CONTACT" id="contact">
+    <PageSection title="contact" id="contact">
       <Contact />
     </PageSection>
     <Navbar /> 

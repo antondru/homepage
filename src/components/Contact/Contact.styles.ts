@@ -19,7 +19,7 @@ export const ContactInfoText = styled.div`
 `;
 
 /* container for label and input field */
-export const InputDiv = styled.div`
+export const InputContainer = styled.div`
   display: flex;
   flex-direction: row;
   gap: 1.5em;

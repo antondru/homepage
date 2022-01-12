@@ -8,7 +8,7 @@ type Props = {
 
 const PageSection: React.FC<Props> = ({ title, id, children } : Props): JSX.Element => {
   return (
-    <section className="pageSection" id={id}>
+    <section className="page-section" id={id}>
       <ContentDiv className="content">
         <SectionHeader>
           <span style={{ color: "#FD2155" }}>/</span>

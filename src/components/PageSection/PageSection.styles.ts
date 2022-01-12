@@ -29,23 +29,9 @@ export const SubHeader = styled.h2`
   font-size: 1.5em;
   font-weight: 600;
   font-family: 'Staatliches', cursive;
+  padding-bottom: 5px;
   color: #E4E6EB;
 `;
-
-// export const ThreeDEffectText = styled.span`
-//     color: #FD2155;
-//   	text-shadow:
-// 		-1px 1px 0 #08fdd8,
-// 		-2px 2px 0 #08fdd8,
-// 		-3px 3px 0 #08fdd8,
-// 		0px 1px 1px rgba(0,0,0,.4),
-// 		0px 2px 2px rgba(0,0,0,.3),
-// 		-1px 3px 3px rgba(0,0,0,.2),
-// 		-1px 5px 5px rgba(0,0,0,.1),
-// 		-2px 8px 8px rgba(0,0,0,.1),
-// 		-2px 13px 13px rgba(0,0,0,.1)
-// 		;
-// `;
 
 export const ContentDiv = styled.div`
     border: 1px solid black;

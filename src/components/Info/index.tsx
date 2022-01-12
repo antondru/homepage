@@ -1,6 +1,6 @@
 import { FiGithub, FiLinkedin } from "react-icons/fi";
 import { StyledLink, StyledText } from "../../pages/Pages.styles";
-import IconLink from "../IconLink";
+import IconLink from "./IconLink";
 import { IconContainer, ImageContainer, Img, InfoContainer, MediaContainer, TextContainer } from "./Info.styles";
 import placeholder from "../../images/Placeholder.png"
 import { SubHeader } from "../PageSection/PageSection.styles";
@@ -11,7 +11,7 @@ export const Info = () => {
   }
   
   return (
-    <InfoContainer className="infoContainer">
+    <InfoContainer className="info-container">
       <TextContainer>
         <SubHeader>Hello<span style={{ color: "#FD2155" }}>.</span></SubHeader>
         <StyledText>
@@ -24,11 +24,11 @@ export const Info = () => {
           You can also <StyledLink onClick={() => {scrollToElement("contact")}}>contact</StyledLink> me by sending a message!
         </StyledText>
       </TextContainer>
-      <MediaContainer className="mediaContainer">
-        <ImageContainer className="imageContainer"> 
+      <MediaContainer className="media-container">
+        <ImageContainer className="image-container"> 
           <Img src={placeholder} alt="profilepic" height='150px' width='150px' />
         </ImageContainer>
-        <IconContainer className="iconContainer">
+        <IconContainer className="icon-container">
           <IconLink icon={<FiGithub />} href="https://github.com/antondru" target="_blank" rel="noopener noreferrer" desc="GitHub" />
           <IconLink icon={<FiLinkedin />} href="https://www.linkedin.com/in/anton-drugge-90304a83/" target="_blank" rel="noopener noreferrer" desc="LinkedIn" />
         </IconContainer>

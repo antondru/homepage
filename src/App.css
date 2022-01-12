@@ -1,4 +1,4 @@
-.pageSection {
+.page-section {
   padding-top: 5vw;
   margin: auto;
   width: 50vw;
@@ -8,7 +8,7 @@
   transition: 500ms;
 }
 
-.pageSection.show {
+.page-section.show {
   transform: translateX(-200px);
   opacity: 1;
 }
@@ -37,7 +37,7 @@ p {
 
 /* for mobile devices */
 @media (max-width: 1024px) {
-  .pageSection {
+  .page-section {
     padding-left: 0;
     padding-top: 0;
     transform: translateX(50px);
@@ -45,14 +45,14 @@ p {
     transition: 500ms;
   }
 
-  .pageSection.show {
+  .page-section.show {
     transform: translateX(-20px); /* TODO: Doesn't really center correctly, band-aid fix. Im not sure if it even centers correctly on web. This looks better on mobile tho. */
     opacity: 1;
   }
 }
 
 @media (max-width: 320px) {
-  .pageSection {
+  .page-section {
     padding-left: 0;
     padding-top: 0;
     transform: translateX(10px);
