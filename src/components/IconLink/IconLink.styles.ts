@@ -24,3 +24,8 @@ export const DescriptionText = styled.p`
         font-size: 0.7em;
     }
 `;
+
+export const IconDiv = styled.div`
+    justify-items: center;
+    display: grid;
+`;

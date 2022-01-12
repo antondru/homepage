@@ -29,23 +29,22 @@ export const ContentDiv = styled.div`
     width: auto; // kolla på detta
     padding: 1em 1em 1em 1em;
 
-    @media (max-width: 1024px) {
+     /* @media (max-width: 1024px) {
       border: none;
       border-radius: none;
       background: none;
       box-shadow: none;
-      padding-top: 0.5em;
-      /* padding-left: 4em; */
+      padding-top: 0.5em; 
       width: 100%;
-    }
-
+    } */
+    
     @media (max-width: 320px) {
       border: none;
       border-radius: none;
       background: none;
       box-shadow: none;
       padding-top: 0.5em;
-      /* padding-left: 2em; */
       width: 100%;
+      padding: 0;
     }
 `;

@@ -1,6 +1,6 @@
 import React from "react";
 import { IconBaseProps } from "react-icons/lib";
-import { DescriptionText, StyledIconLink } from './IconLink.styles'
+import { DescriptionText, IconDiv, StyledIconLink } from './IconLink.styles'
 
 type Props = {
     icon: IconBaseProps
@@ -12,14 +12,14 @@ type Props = {
 
 const IconLink = ({ icon, href, target, rel, desc } : Props) => {
     return (
-      <div className="icon">
+      <IconDiv className="icon">
         <StyledIconLink href={href} target={target} rel={rel}>
           {icon}
         </StyledIconLink>
         <DescriptionText>
           {desc}
         </DescriptionText>
-      </div>
+      </IconDiv>
     );
 };
 
