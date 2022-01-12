@@ -5,7 +5,8 @@ export const Img = styled.img`
     width: 150px;
     border: 2px solid #FD2155;
     border-radius: 50%;
-
+    box-shadow: 0 0 3px #FD2155; // kanske...
+        
     @media (max-width: 640px) {
         height: 75px;
         width: 75px;

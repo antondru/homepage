@@ -41,7 +41,7 @@ export const FrontPage = () => {
 
   return (
   <>
-    <PageSection title="HELLO" id="info">
+    <PageSection title="INFO" id="info">
       <Info />
     </PageSection>
     <PageSection title="PROJECTS" id="projects">

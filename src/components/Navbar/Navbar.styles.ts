@@ -91,7 +91,7 @@ export const NavUnorderedList = styled.ul`
 
     &:last-child {
       border-right: none;
-      /* padding-right: none; */
+      padding-right: 0;
     }
 
     @media screen and (max-width: 1024px) {

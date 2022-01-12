@@ -16,29 +16,18 @@ export const StyledLink = styled.a`
     text-decoration: none;
 
     &:hover {
-    text-shadow: 0 0 10px #08fdd8;
-    transition: 0.5s ease-in-out;
-    cursor: pointer;
+      text-shadow: 0 0 10px #08fdd8;
+      transition: 0.5s ease-in-out;
+      cursor: pointer;
     }
 `;
 
 export const ErrorMessage = styled.p`
-  color: red;
+  color: #FD2155;
   font-size: 1em;
   font-family: monospace;
-  animation: fadeIn 0.5s;
-  
-  @keyframes fadeIn {
-  from {
-    opacity: 0%;
-  }
-  to {
-    opacity: 100%;
-  }
 
-    @media screen and (max-width: 640px) {
+  @media screen and (max-width: 640px) {
     font-size: 0.8em;
   }
-}
-
 `;

@@ -1,5 +1,5 @@
 import { StyledLabel } from "../InputField/InputField.styles";
-import { CharacterCountDiv, StyledTextArea } from "./MessageField.styles";
+import { CharacterCountDiv, MessageContainer, StyledTextArea, TextAreaContainer } from "./MessageField.styles";
 
 type Props = {
   placeholder: string;
@@ -14,9 +14,9 @@ type Props = {
 
 export const MessageField = ({ placeholder, name, value, onChange, id, label, characterCount, onBlur }: Props) => {
   return (
-    <div id="messageDiv">
+    <MessageContainer id="message-container">
       <StyledLabel htmlFor={id}>{label}</StyledLabel>
-      <div className="textarea">
+      <TextAreaContainer className="textarea-container">
         <StyledTextArea
           id={id}
           name={name}
@@ -27,7 +27,7 @@ export const MessageField = ({ placeholder, name, value, onChange, id, label, ch
           maxLength={250}
         />
         <CharacterCountDiv>{characterCount}/250</CharacterCountDiv>  
-      </div>   
-    </div> 
+      </TextAreaContainer>   
+    </MessageContainer> 
   );
 };

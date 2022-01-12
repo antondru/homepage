@@ -1,5 +1,32 @@
 import styled from "styled-components";
 
+/* container */
+export const MessageContainer = styled.div`
+  align-items: top;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5em;
+
+  @media (max-width: 1024px) {
+    align-items: top;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+`;
+
+export const TextAreaContainer = styled.div`
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    text-align: right; // for char counter
+
+    @media (max-width: 1024px) {
+        width: 100%;
+    }
+`;
+
+/* text area */
 export const StyledTextArea = styled.textarea`
     height: 200px;
     color: white;
@@ -23,6 +50,7 @@ export const StyledTextArea = styled.textarea`
     }
 `;
 
+/* div for character count below message box */
 export const CharacterCountDiv = styled.div`
     color: #c4c4c4;
     font-size: 0.8em;

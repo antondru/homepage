@@ -13,86 +13,11 @@
   opacity: 1;
 }
 
-.contactContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 2em;
-}
-
-/* .infoContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 2em;
-} */
-
-.contactForm {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-}
-
 /* for trapping spam */
 #phone {
   display: none;
 }
 
-/* .iconContainer {
-  display: grid;
-  gap: 1em;
-  grid-template-columns: 1fr 1fr;
-  align-self: flex-end;
-} */
-
-.inputFieldContainer {
-  display: flex;
-  flex-direction: row;
-}
-
-.errorMessageContainerMessageField {
-  height: 20px;
-  margin-bottom: 1em;
-}
-
-/* */
-/* CONTACT SECTION */
-/* */
-
-/* container for entire contact section */
-#contactContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-}
-
-/* container for text */
-.contactInfoText {
-  margin-bottom: 2em;
-}
-
-/* container for label and input field */
-.inputDiv {
-  display: flex;
-  flex-direction: row;
-  gap: 1.5em;
-}
-
-#inputDiv .input {
-  width: 30%;
-}
-
-/* container for label and message field */
-#messageDiv {
-  align-items: top;
-  display: flex;
-  flex-direction: row;
-  gap: 1.5em;
-}
-
-#messageDiv .textarea {
-  width: 50%;
-  flex-direction: column;
-  text-align: right;
-}
 
 .button {
   display: flex;
@@ -112,10 +37,6 @@ p {
 
 /* for mobile devices */
 @media (max-width: 1024px) {
-  .contactForm {
-    gap: 0.7em;
-  }
-
   .pageSection {
     padding-left: 0;
     padding-top: 0;
@@ -128,40 +49,6 @@ p {
     transform: translateX(-20px); /* TODO: Doesn't really center correctly, band-aid fix. Im not sure if it even centers correctly on web. This looks better on mobile tho. */
     opacity: 1;
   }
-
-  #messageDiv {
-    align-items: top;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-  }
-
-  #messageDiv .textarea {
-    width: 100%;
-    flex-direction: column;
-    text-align: right;
-  }
-
-  .inputDiv {
-    display: flex;
-    flex-direction: column;
-    gap: 0.1em;
-  }
-
-  .input {
-    width: 100%;
-  }
-
-  .errorMessageContainerInputField {
-    font-size: 12px;
-    height: 20px;
-  }
-
-  .errorMessageContainerMessageField {
-    font-size: 12px;
-    height: 20px;
-    margin-bottom: 0em;
-  }
 }
 
 @media (max-width: 320px) {
@@ -170,26 +57,5 @@ p {
     padding-top: 0;
     transform: translateX(10px);
     transition: 500ms;
-  }
-
-  .contactForm {
-    gap: 0.7em;
-  }
-
-  #contactContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .errorMessageContainerInputField {
-    font-size: 10px;
-    height: 18px;
-  }
-
-  .errorMessageContainerMessageField {
-    font-size: 10px;
-    height: 18px;
-    margin-bottom: 0em;
   }
 }
