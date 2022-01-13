@@ -3,10 +3,10 @@ import styled from "styled-components";
 export const StyledIconLink = styled.a`
     font-size: 2em;
     text-decoration: none;
-    color: #08fdd8;
+    color: #E4E6EB;
     
     &:hover {
-        filter: drop-shadow(0 0 8px #08fdd8);
+        filter: drop-shadow(0 0 8px #E4E6EB);
         transition: 0.5s ease-in-out;
     }
 

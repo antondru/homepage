@@ -3,9 +3,8 @@ import styled from "styled-components";
 export const Img = styled.img`
     height: 150px;
     width: 150px;
-    border: 2px solid #FD2155;
+    border: 3px solid #141517;
     border-radius: 50%;
-    box-shadow: 0 0 3px #FD2155; // kanske...
         
     @media (max-width: 640px) {
         height: 75px;

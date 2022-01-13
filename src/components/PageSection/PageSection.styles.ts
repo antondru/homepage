@@ -6,7 +6,7 @@ export const SectionHeader = styled.h1`
   font-family: 'Staatliches', cursive;
   color: #E4E6EB;
   margin: 0;
-  border-bottom: 2px solid #141517;
+  border-bottom: 2px solid #0f0f0f;//#141517;
 
   // TODO: effekter på rubrik...
   &:hover {
@@ -40,8 +40,8 @@ export const ContentDiv = styled.div`
     display: flex;
     flex-direction: column;
     gap: 2em;
-    background: #181a1c;
-    box-shadow: 3px 5px #141517;
+    background: #141414; //#181a1c;
+    box-shadow: 3px 5px #0f0f0f;//#141517;
     width: auto; // kolla på detta
     padding: 1em 1em 1em 1em;
 
@@ -65,6 +65,7 @@ export const BlinkingLetter = styled.span`
     color: #FD2155;
     animation: animate 0.7s linear infinite;
     text-shadow: 0 0 5px #FD2155;
+    /* animation-iteration-count: 5; */
 
     @keyframes animate {
         0% {

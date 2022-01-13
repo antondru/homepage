@@ -13,7 +13,7 @@ export const Info = () => {
   return (
     <InfoContainer className="info-container">
       <TextContainer>
-        <SubHeader>Hello<span style={{ color: "#FD2155" }}>.</span></SubHeader>
+        <SubHeader>Hello<span style={{ color: "#FD2155" }}>▼</span></SubHeader>
         <StyledText>
           Hi, I'm Anton! I'm a developer from Luleå, Sweden. On this page, you can see some of my <StyledLink onClick={() => {scrollToElement("projects")}}>projects</StyledLink>.
           <br />
