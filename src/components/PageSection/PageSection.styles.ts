@@ -41,7 +41,7 @@ export const ContentDiv = styled.div`
     flex-direction: column;
     gap: 2em;
     background: #181a1c;
-    box-shadow: 4px 8px #141517;
+    box-shadow: 3px 5px #141517;
     width: auto; // kolla på detta
     padding: 1em 1em 1em 1em;
 
