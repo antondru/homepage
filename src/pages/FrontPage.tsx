@@ -12,8 +12,6 @@ export const FrontPage = () => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         entry.target.classList.toggle("show", entry.isIntersecting);
-        console.log(entry.isIntersecting)
-        console.log(entry.intersectionRatio)
         handleNavBar(entry);
       })
     }, {
@@ -22,6 +20,7 @@ export const FrontPage = () => {
 
     sections.forEach(section => {
       observer.observe(section);
+      //observer.unobserve(section); // TODO:
     })
   },[])
 
