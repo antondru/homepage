@@ -19,7 +19,7 @@
 }
 
 html, body {
-  background: #1c1e21;
+  background: #1a1a1a;/*#1c1e21;*/
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
@@ -51,5 +51,20 @@ p {
     padding-top: 0;
     transform: translateX(10px);
     transition: 500ms;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms 
+    !important;
+    animation-iteration-count: 1 
+    !important;
+    scroll-behavior: auto 
+    !important;
+    transition-delay: 0ms !important;
+    transform: translateX(0) !important;
   }
 }

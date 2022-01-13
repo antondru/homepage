@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
   z-index: 999;
   width: 100%;
   height: 6vh;
-  background-color: #1c1e21; 
+  background-color: #1a1a1a;//#1c1e21; 
   align-items: center;
 
   @media screen and (max-width: 1024px) {
@@ -43,8 +43,7 @@ export const NavIconLink = styled.a`
   font-size: 1.5em;
 
   &:hover {
-    color: #08fdd8;
-    filter: drop-shadow(0 0 1px #08fdd8);
+    filter: drop-shadow(0 0 3px #E4E6EB);
     transition: 0.5s ease-in-out;
   }
 `;
@@ -71,8 +70,8 @@ export const NavUnorderedList = styled.ul`
 
   .active {
     font-weight: 600;
-    color: #08fdd8;
-    text-shadow: 0 0 1px #08fdd8;
+    color: #E4E6EB;
+    text-shadow: 0 0 1px #E4E6EB;
   }
 
   li {
@@ -115,16 +114,7 @@ export const StyledNavLink = styled.a`
   text-decoration: none;
 
   &:hover {
-    color: #08fdd8;
-    text-shadow: 0 0 5px #08fdd8;
-    animation: fadeIn 1s;
-  
-    @keyframes fadeIn {
-    from {
-      color: #E4E6EB;
-    }
-    to {
-      color: #08fdd8;
-    } */
+    color: #E4E6EB;
+    text-shadow: 0 0 5px #E4E6EB;
   }
 `;
