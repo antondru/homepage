@@ -12,11 +12,11 @@ export const StyledText = styled.p`
 `;
 
 export const StyledLink = styled.a`
-    color: #08fdd8;
+    color: #FD2155;
     text-decoration: none;
 
     &:hover {
-      text-shadow: 0 0 10px #08fdd8;
+      text-shadow: 0 0 10px #FD2155;
       transition: 0.5s ease-in-out;
       cursor: pointer;
     }

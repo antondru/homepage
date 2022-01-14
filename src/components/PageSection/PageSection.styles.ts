@@ -34,14 +34,13 @@ export const SubHeader = styled.h2`
 `;
 
 export const ContentDiv = styled.div`
-    border: 1px solid black;
+    border: 1px solid #0f0f0f;
     border-radius: 8px;
     padding-top: 2vw;
     display: flex;
     flex-direction: column;
     gap: 2em;
     background: #141414; //#181a1c;
-    box-shadow: 3px 5px #0f0f0f;//#141517;
     width: auto; // kolla på detta
     padding: 1em 1em 1em 1em;
 

@@ -93,6 +93,10 @@ export const CardContent = styled.div`
             transition-delay: 500ms;
         }
 
+        ${Card}:hover & {
+            transform: scale(1.03);
+        }
+
         ${Card}:focus-within & {
             transform: translateY(0);  
             transition-delay: 500ms;
