@@ -172,8 +172,11 @@ export const CardButton = styled.a`
     background: #FD2155;
     padding: 0.3em 0.3em;
 
-    /* TODO: Fixa hovereffect på knappen */
-    &:hover {
+    @media (hover) {
+        &:hover {
+            filter: drop-shadow(0 0 3px #FD2155);
+            transition: 0.5s ease;
+        }   
     }
 
     @media (max-width: 872px) {

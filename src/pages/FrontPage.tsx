@@ -16,7 +16,7 @@ export const FrontPage = () => {
         handleNavBar(entry);
       })
     }, {
-      threshold: 1, 
+      threshold: 0.5, 
     })
 
     sections.forEach(section => {
