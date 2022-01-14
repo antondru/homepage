@@ -19,7 +19,7 @@ export const SectionHeader = styled.h1`
   }
 
   @media (max-width: 640px) {
-    font-size: 2.5em;
+    font-size: 2.2em;
     border-bottom: none;
   }
 `;
@@ -31,6 +31,15 @@ export const SubHeader = styled.h2`
   font-family: 'Staatliches', cursive;
   padding-bottom: 5px;
   color: #E4E6EB;
+
+  @media (max-width: 1024px) {
+    font-size: 1.3em;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 1em;
+    border-bottom: none;
+  }
 `;
 
 export const ContentDiv = styled.div`
@@ -47,9 +56,11 @@ export const ContentDiv = styled.div`
      @media (max-width: 1024px) {
       padding-top: 0.5em; 
       width: 100%;
+      gap: 1em;
     }
     
     @media (max-width: 320px) {
+      gap: 0.7em;
       border: none;
       border-radius: none;
       background: none;

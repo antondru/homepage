@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import  PageSection from "../components/PageSection";
 import { Contact } from "../components/Contact";
 import { Projects } from "../components/Projects";
@@ -11,16 +11,16 @@ export const FrontPage = () => {
     const sections = document.querySelectorAll(".page-section")
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
+        console.log(entry.target)
         entry.target.classList.toggle("show", entry.isIntersecting);
         handleNavBar(entry);
       })
     }, {
-      threshold: 0.8, 
+      threshold: 1, 
     })
 
     sections.forEach(section => {
       observer.observe(section);
-      //observer.unobserve(section); // TODO:
     })
   },[])
 

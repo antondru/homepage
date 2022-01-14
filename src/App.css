@@ -2,7 +2,7 @@
   padding-top: 5vw;
   margin: auto;
   width: 50vw;
-  height: 94vh; 
+  height: 100vh; 
   transform: translateX(300px);
   opacity: 0;
   transition: 500ms;
@@ -40,7 +40,7 @@ p {
   }
 
   .page-section.show {
-    transform: translateX(-20px); /* TODO: Doesn't really center correctly, band-aid fix. Im not sure if it even centers correctly on web. This looks better on mobile tho. */
+    transform: translateX(-15px); 
     opacity: 1;
   }
 }

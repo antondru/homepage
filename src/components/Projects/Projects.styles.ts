@@ -24,8 +24,6 @@ export const CardContainer = styled.div`
     justify-content: center;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 0.2em;
-    grid-row-gap: 0.2em;
 
     @media (max-width: 1200px) {
         grid-template-columns: repeat(3, 1fr);
@@ -34,8 +32,6 @@ export const CardContainer = styled.div`
     @media (max-width: 720px) {
         grid-template-columns: repeat(2, 1fr);
     }
-
-
 `;
 
 /* The card itself */
@@ -44,13 +40,13 @@ export const Card = styled.div<CardProps>`
     flex-direction: column;
     justify-content: flex-end;
     height: 14em;
-    border: 2px solid #141517;
-    border-radius: 8px; 
+    border: 2px solid #0f0f0f;
+    border-radius: 3px; 
     background-image: url(${props => props.backgroundImage});
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    max-width: 35ch; // TODO: kolla denna mer... (35 characters wide)
+    max-width: auto; // TODO: kolla denna mer...
     overflow-x: hidden;
     overflow-y: hidden;
     transition: transform 500ms ease;
@@ -61,11 +57,11 @@ export const Card = styled.div<CardProps>`
     }
 
     @media (max-width: 1200px) {
-        height: 10em;
+        height: 8em;
     }
 
     @media (max-width: 720px) {
-        height: 8em;
+        height: 6em;
     }
 `;
 
@@ -85,7 +81,7 @@ export const CardContent = styled.div`
     
     /* If the device is able to hover (like with a mouse), card animations will "play" */
     @media (hover) {
-        transform: translateY(55%);
+        transform: translateY(70%);
         transition: transform 500ms ease;
 
         ${Card}:hover & {
@@ -103,6 +99,10 @@ export const CardContent = styled.div`
             transition-duration: 0ms;
         }
     }
+
+    @media (max-width: 640px) {
+        padding: 0.5em;
+    }
 `;
 
 /* The card title */
@@ -112,6 +112,7 @@ export const CardTitle = styled.h2`
     font-size: 1.1em;
     color: white;
     position: relative;
+    margin: 0;
 
     &::after {
         content: '';
@@ -135,6 +136,14 @@ export const CardTitle = styled.h2`
             transform: scaleX(0);
         }
     }
+
+    @media (max-width: 640px) {
+        font-size: 0.8em;
+    }
+
+    @media (max-width: 280px) {
+        font-size: 0.6em;
+    }
 `;
 
 /* The card text */
@@ -142,6 +151,10 @@ export const CardText = styled.p`
     font-family: 'Open Sans', sans-serif;
     font-size: 0.7em;
     color: white;
+
+    @media (max-width: 1200px) {
+        display: none;
+    }
 `;
 
 /* The card button */
@@ -155,12 +168,15 @@ export const CardButton = styled.a`
     display: inline-block;
     text-decoration: none;
     color: white;
-    /* border: 1px solid #FD2155; */
     border-radius: 3px; 
     background: #FD2155;
     padding: 0.3em 0.3em;
 
     /* TODO: Fixa hovereffect på knappen */
     &:hover {
+    }
+
+    @media (max-width: 872px) {
+        transform: scale(0.8);
     }
 `;

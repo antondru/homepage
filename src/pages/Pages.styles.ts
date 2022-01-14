@@ -7,7 +7,7 @@ export const StyledText = styled.p`
   font-weight: 300;
 
   @media screen and (max-width: 640px) {
-    font-size: 0.8em;
+    font-size: 0.7em;
   }
 `;
 
