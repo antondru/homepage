@@ -4,9 +4,9 @@ export const SectionHeader = styled.h1`
   font-size: 4em;
   font-weight: 600;
   font-family: 'Staatliches', cursive;
-  color: #E4E6EB;
+  color: var(--offWhite);
   margin: 0;
-  border-bottom: 2px solid #0f0f0f;//#141517;
+  border-bottom: 2px solid var(--darkGrey);//#141517;
 
   // TODO: effekter på rubrik...
   &:hover {
@@ -24,13 +24,18 @@ export const SectionHeader = styled.h1`
   }
 `;
 
+export const StyledLetter = styled.span`
+  color: var(--lightGreen);
+  text-shadow: 0 0 5px #03fcad;
+`;
+
 export const SubHeader = styled.h2`
   margin: 0;
   font-size: 1.5em;
   font-weight: 600;
   font-family: 'Staatliches', cursive;
   padding-bottom: 5px;
-  color: #E4E6EB;
+  color: var(--offWhite);
 
   @media (max-width: 1024px) {
     font-size: 1.3em;
@@ -43,7 +48,7 @@ export const SubHeader = styled.h2`
 `;
 
 export const ContentDiv = styled.div`
-    border: 1px solid #0f0f0f;
+    border: 1px solid var(--darkGrey);
     border-radius: 8px;
     padding-top: 2vw;
     display: flex;
@@ -59,22 +64,22 @@ export const ContentDiv = styled.div`
       gap: 1em;
     }
     
-    @media (max-width: 320px) {
+    @media (max-width: 414px) {
       gap: 0.7em;
       border: none;
       border-radius: none;
       background: none;
       box-shadow: none;
-      padding-top: 0.5em;
-      width: 100%;
+      margin-top: 1em;
+      width: 150%;
       padding: 0;
     }
 `;
 
 export const BlinkingLetter = styled.span`
-    color: #FD2155;
-    animation: animate 0.7s linear infinite;
-    text-shadow: 0 0 5px #FD2155;
+    color: var(--lightGreen);
+    animation: animate 0.8s linear infinite;
+    text-shadow: 0 0 5px #03fcad;
     /* animation-iteration-count: 5; */
 
     @keyframes animate {

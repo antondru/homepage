@@ -32,6 +32,10 @@ export const CardContainer = styled.div`
     @media (max-width: 720px) {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    @media (max-width: 320px) {
+        width: 140%;
+    }
 `;
 
 /* The card itself */
@@ -40,7 +44,7 @@ export const Card = styled.div<CardProps>`
     flex-direction: column;
     justify-content: flex-end;
     height: 14em;
-    border: 2px solid #0f0f0f;
+    border: 2px solid var(--darkGrey);
     border-radius: 3px; 
     background-image: url(${props => props.backgroundImage});
     background-repeat: no-repeat;
@@ -121,7 +125,7 @@ export const CardTitle = styled.h2`
         height: 2px;
         left: calc(1em * -0.9); // 0.9 so the line is "within" the card
         bottom: -2px;
-        background: #FD2155;
+        background: var(--lightGreen);
         transform-origin: left;
         transition: transform 300ms ease;
     }
@@ -167,14 +171,15 @@ export const CardButton = styled.a`
     cursor: pointer;
     display: inline-block;
     text-decoration: none;
+    border: 1px solid var(--lightGreen);
     color: white;
     border-radius: 3px; 
-    background: #FD2155;
+    background: var(--darkGrey);
     padding: 0.3em 0.3em;
 
     @media (hover) {
         &:hover {
-            filter: drop-shadow(0 0 3px #FD2155);
+            filter: drop-shadow(0 0 3px var(--lightGreen));
             transition: 0.5s ease;
         }   
     }

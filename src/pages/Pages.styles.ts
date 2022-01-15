@@ -12,18 +12,18 @@ export const StyledText = styled.p`
 `;
 
 export const StyledLink = styled.a`
-    color: #FD2155;
+    color: var(--lightGreen);
     text-decoration: none;
 
     &:hover {
-      text-shadow: 0 0 10px #FD2155;
+      text-shadow: 0 0 10px var(--lightGreen);
       transition: 0.5s ease-in-out;
       cursor: pointer;
     }
 `;
 
 export const ErrorMessage = styled.p`
-  color: #FD2155;
+  color: var(--red);
   font-size: 1em;
   font-family: monospace;
 

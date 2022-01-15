@@ -1,6 +1,6 @@
 import React from "react";
 import { StyledText } from "../../pages/Pages.styles";
-import { SubHeader } from "../PageSection/PageSection.styles";
+import { StyledLetter, SubHeader } from "../PageSection/PageSection.styles";
 import { ProjectCard } from "./ProjectComponent";
 import { CardContainer, ProjectsContainer, TextContainer } from "./Projects.styles";
 
@@ -16,7 +16,7 @@ export const Projects = () => {
           You can check out my projects below. For now, there are just placeholders.
         </StyledText>
       </TextContainer>
-      <SubHeader>My Projects<span style={{ color: "#FD2155" }}>▼</span></SubHeader>
+      <SubHeader><StyledLetter>/</StyledLetter>My Projects</SubHeader>
       <CardContainer className="card-container">
         <ProjectCard backgroundImage={placeholder} title="Placeholder 1" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry." href="#"></ProjectCard>
         <ProjectCard backgroundImage={placeholder} title="Placeholder 2" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry." href="#"></ProjectCard>

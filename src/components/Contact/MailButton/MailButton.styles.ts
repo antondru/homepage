@@ -9,7 +9,7 @@ export const StyledMailButton = styled.button<Props>`
     background: none;
     opacity: ${props => props.disabled ? "0.2" : "1"};
     cursor: ${props => props.disabled ? "not-allowed" : "pointer"};
-    color: #E4E6EB;
+    color: var(--offWhite);
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 0.2em;
@@ -24,8 +24,8 @@ export const StyledMailButton = styled.button<Props>`
     &::before {
         top: -2px;
         left: -2px;
-        border-top: 3px solid #E4E6EB;
-        border-left: 3px solid #E4E6EB;
+        border-top: 3px solid var(--lightGreen);
+        border-left: 3px solid var(--lightGreen);
         transition: 0.3s all;
     }
 
@@ -40,8 +40,8 @@ export const StyledMailButton = styled.button<Props>`
     &::after {
         bottom: -2px;
         right: -2px;
-        border-bottom: 3px solid #E4E6EB;
-        border-right: 3px solid #E4E6EB;
+        border-bottom: 3px solid var(--lightGreen);
+        border-right: 3px solid var(--lightGreen);
         transition: 0.3s all;
     }
 
@@ -51,8 +51,8 @@ export const StyledMailButton = styled.button<Props>`
     }
 
     &:hover {
-        background: #E4E6EB;
-        color: #0f0f0f;
+        background: var(--lightGreen);
+        color: var(--darkGrey);
         transition: 0.5s ease-in-out;
     }
 

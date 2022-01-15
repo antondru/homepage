@@ -14,15 +14,15 @@ export const FrontPage = () => {
         console.log(entry.target)
         entry.target.classList.toggle("show", entry.isIntersecting);
         handleNavBar(entry);
-      })
+      });
     }, {
       threshold: 0.5, 
-    })
+    });
 
     sections.forEach(section => {
       observer.observe(section);
-    })
-  },[])
+    });
+  },[]);
 
   function handleNavBar(entry: IntersectionObserverEntry) {
     const id = entry.target.id;

@@ -11,7 +11,7 @@ const PageSection: React.FC<Props> = ({ title, id, children } : Props): JSX.Elem
     <section className="page-section" id={id}>
       <ContentDiv className="content">
         <SectionHeader>
-          <span style={{ color: "#FD2155" }}>/</span>
+          <span style={{ color: "#03fcad" }}>/</span>
           {title}
           <BlinkingLetter>.</BlinkingLetter>
         </SectionHeader>

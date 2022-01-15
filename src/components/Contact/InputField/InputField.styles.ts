@@ -2,18 +2,18 @@ import styled from "styled-components";
 
 export const StyledInput = styled.input`
   color: white;
-  background: #0f0f0f;
+  background: var(--darkGrey);
   padding: 10px;
   border-radius: 3px;
-  border: 1px solid #0f0f0f;
+  border: 1px solid var(--darkGrey);
   font-family: monospace;
   width: 100%;
   box-sizing: border-box;
 
   &:focus {
     outline: none;
-    border-color: #E4E6EB;
-    box-shadow: 0 0 1px #E4E6EB;
+    border-color: var(--offWhite);
+    box-shadow: 0 0 1px var(--offWhite);
     transition: border-color 0.5s ease-in-out;
   }
 
@@ -25,7 +25,7 @@ export const StyledInput = styled.input`
 
 export const StyledLabel = styled.label`
   font-family: 'Open Sans', sans-serif;
-  color: #E4E6EB;
+  color: var(--offWhite);
   font-size: 0.7em;
   width: 50px;
 
