@@ -29,8 +29,8 @@ export const Info = () => {
           <Img src={placeholder} alt="profilepic" height='150px' width='150px' />
         </ImageContainer>
         <IconContainer className="icon-container">
-          <IconLink icon={<FiGithub />} href="https://github.com/antondru" target="_blank" rel="noopener noreferrer" desc="GitHub" />
-          <IconLink icon={<FiLinkedin />} href="https://www.linkedin.com/in/anton-drugge-90304a83/" target="_blank" rel="noopener noreferrer" desc="LinkedIn" />
+          <IconLink icon={<FiGithub />} href="https://github.com/antondru" target="_blank" rel="noopener noreferrer" desc="GitHub" title="GitHub" />
+          <IconLink icon={<FiLinkedin />} href="https://www.linkedin.com/in/anton-drugge-90304a83/" target="_blank" rel="noopener noreferrer" desc="LinkedIn" title="LinkedIn" />
         </IconContainer>
       </MediaContainer>
     </InfoContainer>

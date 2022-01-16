@@ -64,14 +64,19 @@ export const NavUnorderedList = styled.ul`
   padding-left: 5vw;
   /* padding-right: 5vw; */
 
-  @media screen and (max-width: 1024px) {
+  @media (max-width: 1024px) {
       padding-left: 0;
   }
 
   .active {
     font-weight: 600;
-    color: var(--offWhite);
     text-shadow: 0 0 1px var(--offWhite);
+
+    // fix for now until I implement hamburger menu since the active class doesn't work well on mobile with the intersection observer etc. doesn't highlight nav items on scroll on mobile devices.
+    @media (hover: none) { 
+      font-weight: 400;
+      text-shadow: none;
+    }
   }
 
   li {

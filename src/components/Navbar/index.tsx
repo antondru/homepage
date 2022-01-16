@@ -29,8 +29,8 @@ export const Navbar = () => {
                 </NavUnorderedList>
             </NavMenu>
             <NavIconLinkContainer>
-                <NavMenuIconLink href="https://github.com/antondru" target="_blank" rel="noopener noreferrer" icon={<BsGithub />} />
-                <NavMenuIconLink href="https://www.linkedin.com/in/anton-drugge-90304a83/" target="_blank" rel="noopener noreferrer" icon={<BsLinkedin />} />
+                <NavMenuIconLink href="https://github.com/antondru" target="_blank" rel="noopener noreferrer" icon={<BsGithub />} title="GitHub"/>
+                <NavMenuIconLink href="https://www.linkedin.com/in/anton-drugge-90304a83/" target="_blank" rel="noopener noreferrer" icon={<BsLinkedin />} title="LinkedIn"/>
             </NavIconLinkContainer>
         </Wrapper>
     );

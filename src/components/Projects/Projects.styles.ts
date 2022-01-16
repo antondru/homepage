@@ -34,7 +34,7 @@ export const CardContainer = styled.div`
     }
 
     @media (max-width: 320px) {
-        width: 140%;
+        width: 120%;
     }
 `;
 

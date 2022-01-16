@@ -8,12 +8,13 @@ type Props = {
     target: string
     rel: string
     desc: string
+    title: string
 };
 
-const IconLink = ({ icon, href, target, rel, desc } : Props) => {
+const IconLink = ({ icon, href, target, rel, desc, title } : Props) => {
     return (
       <IconDiv className="icon">
-        <StyledIconLink href={href} target={target} rel={rel}>
+        <StyledIconLink href={href} target={target} rel={rel} title={title}>
           {icon}
         </StyledIconLink>
         <DescriptionText>
