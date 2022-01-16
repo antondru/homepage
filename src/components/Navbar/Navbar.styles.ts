@@ -57,7 +57,7 @@ export const NavUnorderedList = styled.ul`
   list-style: none;
   color: var(--offWhite);
   cursor: pointer;
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--text);
   font-weight: 400;
   font-size: 0.8em;
   padding: 0;

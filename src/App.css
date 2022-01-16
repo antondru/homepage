@@ -1,9 +1,14 @@
 :root {
+  /* colors */
   --lightGreen: #03fcad;
   --offWhite: #E4E6EB;
   --darkGrey: #0f0f0f;
   --grey: #1a1a1a;
   --red: #FD2155;
+
+  /* fonts */
+  --heading: 'Staatliches', cursive;
+  --text:  "Segoe UI", Arial, sans-serif;
 }
 
 .page-section {

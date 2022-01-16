@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyledText = styled.p`
   color: #ffffff;
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--text);
   font-size: 0.9em;
   font-weight: 300;
 

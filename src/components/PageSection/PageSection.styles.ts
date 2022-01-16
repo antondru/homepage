@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const SectionHeader = styled.h1`
   font-size: 4em;
   font-weight: 600;
-  font-family: 'Staatliches', cursive;
+  font-family: var(--heading);
   color: var(--offWhite);
   margin: 0;
   border-bottom: 2px solid var(--darkGrey);//#141517;
@@ -33,7 +33,7 @@ export const SubHeader = styled.h2`
   margin: 0;
   font-size: 1.5em;
   font-weight: 600;
-  font-family: 'Staatliches', cursive;
+  font-family: var(--heading);
   padding-bottom: 5px;
   color: var(--offWhite);
 

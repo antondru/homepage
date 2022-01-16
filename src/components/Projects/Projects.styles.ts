@@ -112,7 +112,7 @@ export const CardContent = styled.div`
 /* The card title */
 export const CardTitle = styled.h2`
     width: max-content;
-    font-family: 'Staatliches', cursive;
+    font-family: var(--heading);
     font-size: 1.1em;
     color: white;
     position: relative;
@@ -152,7 +152,7 @@ export const CardTitle = styled.h2`
 
 /* The card text */
 export const CardText = styled.p`
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--text);
     font-size: 0.7em;
     color: white;
 
@@ -163,7 +163,7 @@ export const CardText = styled.p`
 
 /* The card button */
 export const CardButton = styled.a`
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--text);
     font-size: 0.7em;
     text-align: center;
     width: 3em;

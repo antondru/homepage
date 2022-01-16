@@ -18,7 +18,7 @@ export const StyledIconLink = styled.a`
 export const DescriptionText = styled.p`
     font-size: 0.7em;
     color: var(--lightGreen);
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--text);
 
     @media (max-width: 640px) {
         font-size: 0.7em;

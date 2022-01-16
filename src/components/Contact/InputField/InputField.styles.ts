@@ -24,9 +24,9 @@ export const StyledInput = styled.input`
 `;
 
 export const StyledLabel = styled.label`
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--text);
   color: var(--offWhite);
-  font-size: 0.7em;
+  font-size: 0.8em;
   width: 50px;
 
   @media screen and (max-width: 1024px) {
