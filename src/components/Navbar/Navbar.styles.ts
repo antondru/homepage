@@ -42,9 +42,11 @@ export const NavIconLink = styled.a`
   color: var(--offWhite);
   font-size: 1.5em;
 
-  &:hover {
-    filter: drop-shadow(0 0 3px var(--lightGreen));
-    transition: 0.5s ease-in-out;
+  @media (hover) {
+    &:hover {
+      filter: drop-shadow(0 0 3px var(--lightGreen));
+      transition: 0.5s ease-in-out;
+    }
   }
 `;
 
@@ -104,7 +106,6 @@ export const NavUnorderedList = styled.ul`
       padding-right: 10px;
       padding-left: 10px;
     }
-
   }
 
   @media screen and (max-width: 1024px) {
@@ -118,8 +119,10 @@ export const NavUnorderedList = styled.ul`
 export const StyledNavLink = styled.a`
   text-decoration: none;
 
-  &:hover {
-    color: var(--offWhite);
-    text-shadow: 0 0 5px var(--offWhite);
+  @media (hover) {
+    &:hover {
+      color: var(--offWhite);
+      text-shadow: 0 0 5px var(--offWhite);
+    }
   }
 `;
