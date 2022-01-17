@@ -50,7 +50,7 @@ export const Card = styled.div<CardProps>`
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    max-width: auto; // TODO: kolla denna mer...
+    max-width: auto; 
     overflow-x: hidden;
     overflow-y: hidden;
     transition: transform 500ms ease;

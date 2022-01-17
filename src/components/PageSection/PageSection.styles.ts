@@ -9,7 +9,7 @@ export const SectionHeader = styled.h1`
   margin: 0;
   border-bottom: 2px solid var(--darkGrey);
 
-  // TODO: effekter på rubrik...
+  // TODO: effekter på rubrik... senare kanske
   &:hover {
         /* filter: drop-shadow(0 0 5px #08fdd8);
         transition: 0.5s ease-in-out; */

@@ -57,7 +57,7 @@ export const VerticalLink = styled.a`
   cursor: pointer;
   display: inline-block;
   font-size: 0.8em;
-  color: var(--medGrey);
+  color: var(--lightGrey);
   writing-mode: vertical-rl;
   text-orientation: mixed;
   animation-name: bounce;

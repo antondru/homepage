@@ -1,10 +1,12 @@
-import React from 'react';
-import './App.css';
+import { GlobalStyle } from './GlobalStyles'
 import { FrontPage } from './pages/FrontPage';
 
 function App() {
   return (
-    <FrontPage />
+    <>
+      <FrontPage />
+      <GlobalStyle />
+    </>
   );
 }
 
