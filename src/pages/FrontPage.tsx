@@ -39,13 +39,13 @@ export const FrontPage = () => {
 
   return (
   <>
-    <PageSection title="info" id="info" firstSection={true} lastSection={false}>
+    <PageSection title="info" id="info" firstSection={true} lastSection={false} scrollDownTo="projects">
       <Info />
     </PageSection>
-    <PageSection title="projects" id="projects" firstSection={false} lastSection={false}>
+    <PageSection title="projects" id="projects" firstSection={false} lastSection={false} scrollDownTo="contact" scrollUpTo="info">
       <Projects />
     </PageSection>
-    <PageSection title="contact" id="contact" firstSection={false} lastSection={true}>
+    <PageSection title="contact" id="contact" firstSection={false} lastSection={true} scrollUpTo="projects">
       <Contact />
     </PageSection>
     <Navbar /> 

@@ -1,18 +1,26 @@
-import { VerticalText } from "../../pages/Pages.styles";
+import { VerticalLink } from "../../pages/Pages.styles";
 import { ContentDiv, SectionHeader, BlinkingLetter, StyledLetter } from "./PageSection.styles";
 
 type Props = {
+  scrollUpTo?: string,
+  scrollDownTo?: string,
   title: string,
   id: string,
   lastSection: boolean,
   firstSection: boolean,
-  children?: JSX.Element 
+  children?: JSX.Element,
 }
 
-const PageSection: React.FC<Props> = ({ title, id, children, firstSection, lastSection } : Props): JSX.Element => {
+const PageSection: React.FC<Props> = ({ title, id, children, firstSection, lastSection, scrollUpTo, scrollDownTo } : Props): JSX.Element => {
+  const scrollToElement = (targetElement: string) => {
+    document.getElementById(targetElement)?.scrollIntoView({behavior: "smooth"});
+  }
+
   return (
     <section className="page-section" id={id}>
-      {firstSection ? '' : <VerticalText style={{paddingBottom: '15px'}}><span style={{color: '#03fcad'}}>🡠 </span>up</VerticalText>}
+      {firstSection ? '' : 
+        <VerticalLink onClick={() => scrollToElement(`${scrollUpTo}`)} style={{paddingBottom: '15px'}}><span style={{color: '#03fcad'}}>🡠 </span>up</VerticalLink>
+      }
       <ContentDiv className="content">
         <SectionHeader>
           <StyledLetter>/</StyledLetter>
@@ -21,7 +29,9 @@ const PageSection: React.FC<Props> = ({ title, id, children, firstSection, lastS
         </SectionHeader>
         {children}
       </ContentDiv>
-      {lastSection ? '' : <VerticalText style={{paddingTop: '35px'}}>down<span style={{color: '#03fcad'}}> 🡢</span></VerticalText>}
+      {lastSection ? '' : 
+        <VerticalLink onClick={() => scrollToElement(`${scrollDownTo}`)} style={{paddingTop: '35px'}}>down<span style={{color: '#03fcad'}}> 🡢</span></VerticalLink>
+      }
     </section>
     
   );

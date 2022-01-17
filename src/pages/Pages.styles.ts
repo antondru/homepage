@@ -32,9 +32,9 @@ export const ErrorMessage = styled.p`
   }
 `;
 
-export const VerticalText = styled.span`
+export const VerticalLink = styled.a`
+  cursor: pointer;
   display: inline-block;
-  transform: rotate(90deg);
   font-size: 0.8em;
   padding-left: 2em;
   color: var(--medGrey);
@@ -42,11 +42,10 @@ export const VerticalText = styled.span`
   text-orientation: mixed;
   animation-name: bounce;
   -webkit-animation-name: bounce;
-  animation-duration: 3s;
-  -webkit-animation-duration: 3s;
+  animation-duration: 1.5s;
+  -webkit-animation-duration: 1.5s;
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
-
 
   @keyframes bounce {
     0% {
@@ -55,7 +54,7 @@ export const VerticalText = styled.span`
     }
     50% {
       -webkit-transform: translateY(-15px);
-      transform: translateY(-15px);
+      transform: translateY(-10px);
     }
     100% {
       -webkit-transform: translateY(0);

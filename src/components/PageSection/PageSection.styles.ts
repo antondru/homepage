@@ -66,12 +66,6 @@ export const ContentDiv = styled.div`
     width: 100%; // kolla på detta
     padding: 1em 1em 1em 1em;
 
-     /* @media (max-width: 1024px) {
-      padding-top: 0.5em; 
-      width: 100%;
-      gap: 1em;
-    } */
-    
     @media (hover: none) {
       gap: 0.7em;
       border: none;
@@ -83,16 +77,6 @@ export const ContentDiv = styled.div`
       padding: 0;
     }
 
-    /* @media (max-width: 414px) {
-      gap: 0.7em;
-      border: none;
-      border-radius: none;
-      background: none;
-      box-shadow: none;
-      margin-top: 1em;
-      width: 150%;
-      padding: 0;
-    } */
 `;
 
 export const BlinkingLetter = styled.span`
