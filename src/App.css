@@ -45,7 +45,7 @@ p {
 
 @media (max-width: 1024px) {
   .page-section {
-    height: 96vh; 
+    height: 94vh; 
     padding-left: 0;
     padding-top: 0;
     transform: translateX(50px);
