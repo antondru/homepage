@@ -33,6 +33,7 @@ export const ErrorMessage = styled.p`
 `;
 
 export const VerticalLink = styled.a`
+  letter-spacing: 0.1em;
   cursor: pointer;
   display: inline-block;
   font-size: 0.8em;

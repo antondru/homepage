@@ -19,7 +19,7 @@ const PageSection: React.FC<Props> = ({ title, id, children, firstSection, lastS
   return (
     <section className="page-section" id={id}>
       {firstSection ? '' : 
-        <VerticalLink onClick={() => scrollToElement(`${scrollUpTo}`)} style={{paddingBottom: '15px'}}><span style={{color: '#03fcad'}}>🡠 </span>up</VerticalLink>
+        <VerticalLink onClick={() => scrollToElement(`${scrollUpTo}`)} style={{paddingBottom: '15px'}}><span style={{color: '#03fcad'}}>🡠 </span>scroll</VerticalLink>
       }
       <ContentDiv className="content">
         <SectionHeader>
@@ -30,7 +30,7 @@ const PageSection: React.FC<Props> = ({ title, id, children, firstSection, lastS
         {children}
       </ContentDiv>
       {lastSection ? '' : 
-        <VerticalLink onClick={() => scrollToElement(`${scrollDownTo}`)} style={{paddingTop: '35px'}}>down<span style={{color: '#03fcad'}}> 🡢</span></VerticalLink>
+        <VerticalLink onClick={() => scrollToElement(`${scrollDownTo}`)} style={{paddingTop: '35px'}}>scroll<span style={{color: '#03fcad'}}> 🡢</span></VerticalLink>
       }
     </section>
     
