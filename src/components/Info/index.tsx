@@ -3,7 +3,7 @@ import { StyledLink, StyledText } from "../../pages/Pages.styles";
 import IconLink from "./IconLink";
 import { IconContainer, ImageContainer, Img, InfoContainer, MediaContainer, TextContainer } from "./Info.styles";
 import placeholder from "../../images/Placeholder.png"
-import { StyledLetter, SubHeader } from "../PageSection/PageSection.styles";
+import { SubHeader } from "../PageSection/PageSection.styles";
 
 export const Info = () => {
   const scrollToElement = (targetElement: string) => {
@@ -13,9 +13,9 @@ export const Info = () => {
   return (
     <InfoContainer className="info-container">
       <TextContainer>
-        <SubHeader><StyledLetter>/</StyledLetter>Hello</SubHeader>
+        <SubHeader>Welcome</SubHeader>
         <StyledText>
-          Hi, I'm Anton! I'm a developer from Luleå, Sweden. On this page, you can see some of my <StyledLink onClick={() => {scrollToElement("projects")}}>projects</StyledLink>.
+          Hi, I'm Anton! I'm from Luleå, Sweden. On this page, you can see some of my <StyledLink onClick={() => {scrollToElement("projects")}}>projects</StyledLink>.
           <br />
           You can also visit my <StyledLink href="https://github.com/antondru" target="_blank" rel="noopener noreferrer"> GitHub</StyledLink> or drop me a message on 
           <StyledLink href="https://www.linkedin.com/in/anton-drugge-90304a83/" target="_blank" rel="noopener noreferrer"> LinkedIn</StyledLink>!

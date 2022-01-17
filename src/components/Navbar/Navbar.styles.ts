@@ -11,15 +11,15 @@ export const Wrapper = styled.div`
   z-index: 999;
   width: 100%;
   height: 6vh;
-  background-color: #1a1a1a;//#1c1e21; 
+  background-color: #1a1a1a;
+  opacity: 0.95;
   align-items: center;
 
-  @media screen and (max-width: 1024px) {
+  @media (hover: none) {
     justify-content: center; 
     height: 4vh;
     background-color: black;
-    /* padding-bottom: 0; */
-  }
+  } 
 
   @media screen and (max-width: 250px) {
     display: none;
@@ -32,7 +32,7 @@ export const NavIconLinkContainer = styled.div`
   gap: 1em;
   padding-right: 5vw;
 
-  @media screen and (max-width: 1024px) {
+  @media (hover: none) {
     display: none;
   }
 `;
@@ -65,13 +65,13 @@ export const NavUnorderedList = styled.ul`
   padding: 0;
   padding-left: 5vw;
 
-  @media (max-width: 1024px) {
-      padding-left: 0;
+  @media (hover: none) {
+    padding-left: 0;
   }
 
   .active {
     font-weight: 600;
-    text-shadow: 0 0 1px var(--offWhite);
+    text-shadow: 0 0 1px var(--lightGreen);
     color: var(--lightGreen);
 
     // fix for now until I implement hamburger menu since the active class doesn't work well on mobile with the intersection observer etc. doesn't highlight nav items on scroll on mobile devices.
@@ -109,7 +109,7 @@ export const NavUnorderedList = styled.ul`
     }
   }
 
-  @media screen and (max-width: 1024px) {
+  @media (hover: none) {
     justify-content: center;
     width: 100%;
     padding-left: 0px;

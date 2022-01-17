@@ -36,17 +36,24 @@ export const InputContainer = styled.div`
 export const ButtonContainer = styled.div`
   width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  align-items: left;
   gap: 2em;
 
-  @media (hover) {
-    display: flex;
-    flex-direction: row;
+  @media (max-width: 1024px) {
+      flex-direction: row;
+      gap: 2em;
+  }
+
+  @media (max-width: 620px) {
+    flex-direction: column;
+    gap: 1em;
   }
 `;
 
 export const MessageSentText = styled(StyledText)`
+  font: var(--text);
+  font-size: 0.8em;
   color: var(--lightGreen);
   animation: fadeIn 1s;
   -moz-animation: fadeIn 1s;
@@ -72,11 +79,10 @@ export const ContactForm = styled.form`
 
 /* container for error msg for input fields */
 export const ErrorMsgContainerInputField = styled.div`
-    font-size: 12px;
+    font-size: 1em;
     height: 20px;
 
     @media (max-width: 320px) {
-        font-size: 10px;
         height: 18px;
     }
 `;
@@ -85,17 +91,13 @@ export const ErrorMsgContainerInputField = styled.div`
 export const ErrorMsgContainerMessageField = styled.div`
     height: 20px;
     margin-bottom: 1em;
-    
+    font-size: 1em;    
 
     @media (max-width: 1024px) {
-        font-size: 12px;
         height: 20px;
-        margin-bottom: 0em;
     }
 
     @media (max-width: 320px) {
-        font-size: 10px;
         height: 18px;
-        margin-bottom: 0em;
     }
 `;

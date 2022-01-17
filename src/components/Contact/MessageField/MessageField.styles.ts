@@ -52,7 +52,7 @@ export const StyledTextArea = styled.textarea`
 
 /* div for character count below message box */
 export const CharacterCountDiv = styled.div`
-    color: #c4c4c4;
+    color: var(--offWhite);
     font-size: 0.8em;
 
     @media screen and (max-width: 1024) {

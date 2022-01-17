@@ -17,7 +17,8 @@ export const StyledMailButton = styled.button<Props>`
     font-family: var(--text);
     font-weight: 600;
     font-size: 0.8em;
-    min-width: 10em;
+    width: 10%;
+    min-width: 5em;
     position: relative;
     border: none;
 
@@ -56,7 +57,11 @@ export const StyledMailButton = styled.button<Props>`
         transition: 0.5s ease-in-out;
     }
 
-    @media screen and (max-width: 1024px) {
+    @media (hover: none) {
+        width: 50%;
+    }
+
+    /* @media screen and (max-width: 1024px) {
         width: 100%;
         font-size: 0.8em;
     }
@@ -64,5 +69,5 @@ export const StyledMailButton = styled.button<Props>`
     @media screen and (max-width: 320px) {
         width: 100%;
         font-size: 0.7em;
-    }
+    } */
 `;

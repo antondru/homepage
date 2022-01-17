@@ -1,4 +1,3 @@
-import React from "react";
 import { StyledMailButton } from "./MailButton.styles";
 
 type Props = {

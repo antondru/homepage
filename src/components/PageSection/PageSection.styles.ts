@@ -6,7 +6,7 @@ export const SectionHeader = styled.h1`
   font-family: var(--heading);
   color: var(--offWhite);
   margin: 0;
-  border-bottom: 2px solid var(--darkGrey);//#141517;
+  border-bottom: 2px solid var(--darkGrey);
 
   // TODO: effekter på rubrik...
   &:hover {
@@ -14,19 +14,27 @@ export const SectionHeader = styled.h1`
         transition: 0.5s ease-in-out; */
     }
 
+  @media (hover: none) {
+    border-bottom: none;
+  }
+
   @media (max-width: 1024px) {
     font-size: 3em;
   }
 
   @media (max-width: 640px) {
     font-size: 2.2em;
-    border-bottom: none;
   }
 `;
 
 export const StyledLetter = styled.span`
-  color: var(--lightGreen);
-  text-shadow: 0 0 5px #03fcad;
+    background-color: var(--lightGreen);
+    background-image: linear-gradient(45deg, var(--darkGreen), var(--lightGreen));
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
 `;
 
 export const SubHeader = styled.h2`
@@ -49,22 +57,22 @@ export const SubHeader = styled.h2`
 
 export const ContentDiv = styled.div`
     border: 1px solid var(--darkGrey);
-    border-radius: 8px;
+    border-radius: 3px;
     padding-top: 2vw;
     display: flex;
     flex-direction: column;
     gap: 2em;
-    background: #141414; //#181a1c;
-    width: auto; // kolla på detta
+    background: #141414; 
+    width: 100%; // kolla på detta
     padding: 1em 1em 1em 1em;
 
-     @media (max-width: 1024px) {
+     /* @media (max-width: 1024px) {
       padding-top: 0.5em; 
       width: 100%;
       gap: 1em;
-    }
+    } */
     
-    @media (max-width: 414px) {
+    @media (hover: none) {
       gap: 0.7em;
       border: none;
       border-radius: none;
@@ -74,13 +82,23 @@ export const ContentDiv = styled.div`
       width: 150%;
       padding: 0;
     }
+
+    /* @media (max-width: 414px) {
+      gap: 0.7em;
+      border: none;
+      border-radius: none;
+      background: none;
+      box-shadow: none;
+      margin-top: 1em;
+      width: 150%;
+      padding: 0;
+    } */
 `;
 
 export const BlinkingLetter = styled.span`
     color: var(--lightGreen);
     animation: animate 0.8s linear infinite;
-    text-shadow: 0 0 5px #03fcad;
-    /* animation-iteration-count: 5; */
+    text-shadow: 0 0 5px var(--lightGreen);
 
     @keyframes animate {
         0% {

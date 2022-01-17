@@ -85,7 +85,7 @@ export const CardContent = styled.div`
     
     /* If the device is able to hover (like with a mouse), card animations will "play" */
     @media (hover) {
-        transform: translateY(70%);
+        transform: translateY(65%);
         transition: transform 500ms ease;
 
         ${Card}:hover & {
