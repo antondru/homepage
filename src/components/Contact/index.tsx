@@ -4,14 +4,13 @@ import { ErrorMessage, StyledText } from "../../pages/Pages.styles";
 import Input from "./InputField";
 import { MailButton } from "./MailButton";
 import { MessageField } from "./MessageField";
+import { ButtonContainer, ContactContainer, ContactForm, ContactInfoText, ErrorMsgContainerInputField, ErrorMsgContainerMessageField, InputContainer, MessageSentText } from "./Contact.styles";
 
 import {
   EMAILJS_USERID,
   EMAILJS_TEMPLATEID,
   EMAILJS_SERVICEID
 } from '../../config';
-
-import { ButtonContainer, ContactContainer, ContactForm, ContactInfoText, ErrorMsgContainerInputField, ErrorMsgContainerMessageField, InputContainer } from "./Contact.styles";
 
 type InputFieldValues = {
   from_name: string
@@ -34,6 +33,7 @@ type hasBeenTargeted = {
 }
 
 export const Contact = (): JSX.Element => {
+  const [messageSent, setMessageSent] = useState(false);
   const [characterCount, setCharacterCount] = useState<number>(0);
   const [toSend, setToSend] = useState<InputFieldValues>({
     from_name: '',
@@ -106,8 +106,8 @@ export const Contact = (): JSX.Element => {
           .catch((err: any) => {
             console.log('FAILED...', err);
           });
+          setMessageSent(true);
           resetForm();
-          alert("Thank you for your message!"); // simple alert for now
         }
     else {
       e.preventDefault();
@@ -144,7 +144,10 @@ export const Contact = (): JSX.Element => {
             name='from_name'
             placeholder='Your name...'
             value={toSend.from_name}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setToSend({ ...toSend, [e.target.name]: e.target.value })}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+              setMessageSent(false);
+              setToSend({ ...toSend, [e.target.name]: e.target.value });
+            }}
             onBlur={(e: React.FocusEvent<HTMLInputElement>) => {
               setWasTargeted({...wasTargeted, nameFieldTargeted: true})
               let nameValid:boolean = validateName(e.target.value);
@@ -168,7 +171,10 @@ export const Contact = (): JSX.Element => {
             name='reply_to'
             placeholder='example@mail.com...'
             value={toSend.reply_to}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setToSend({ ...toSend, [e.target.name]: e.target.value })}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+              setMessageSent(false);
+              setToSend({ ...toSend, [e.target.name]: e.target.value });
+            }}
             onBlur={(e: React.FocusEvent<HTMLInputElement>) => {
               setWasTargeted({...wasTargeted, emailFieldTargeted: true})
               let emailValid:boolean = validateEmail(e.target.value);
@@ -191,6 +197,7 @@ export const Contact = (): JSX.Element => {
           placeholder='Your message...'
           name='message'
           onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => {
+            setMessageSent(false);
             setCharacterCount(e.target.value.length);
             setToSend({ ...toSend, [e.target.name]: e.target.value });
           }}
@@ -211,6 +218,7 @@ export const Contact = (): JSX.Element => {
         </ErrorMsgContainerMessageField>
         <ButtonContainer className="button-container">
           <MailButton disabled={!errorHandler.nameValid || !errorHandler.emailValid || !errorHandler.messageValid} type='submit' desc='SEND'></MailButton>
+          {messageSent ? <MessageSentText>Thank you for your message! &#128512;</MessageSentText> : ''};
         </ButtonContainer>
       </ContactForm>
     </ContactContainer>

@@ -17,7 +17,7 @@ export const StyledMailButton = styled.button<Props>`
     font-family: var(--text);
     font-weight: 600;
     font-size: 0.8em;
-    width: 10%;
+    min-width: 10em;
     position: relative;
     border: none;
 

@@ -26,7 +26,7 @@ export const MessageField = ({ placeholder, name, value, onChange, id, label, ch
           value={value}
           maxLength={250}
         />
-        <CharacterCountDiv>{characterCount}/250</CharacterCountDiv>  
+        <CharacterCountDiv><span style={{color: '#03fcad'}}>{characterCount}</span>/250</CharacterCountDiv>  
       </TextAreaContainer>   
     </MessageContainer> 
   );

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { StyledText } from "../../pages/Pages.styles";
 
 /* container for entire contact section */
 export const ContactContainer = styled.div`
@@ -34,6 +35,28 @@ export const InputContainer = styled.div`
 /* container for button */
 export const ButtonContainer = styled.div`
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+
+  @media (hover) {
+    display: flex;
+    flex-direction: row;
+  }
+`;
+
+export const MessageSentText = styled(StyledText)`
+  color: var(--lightGreen);
+  animation: fadeIn 1s;
+  -moz-animation: fadeIn 1s;
+  -o-animation: fadeIn 1s;
+  -ms-animation: fadeIn 1s;
+
+  @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
 `;
 
 /* form */

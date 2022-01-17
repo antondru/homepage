@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledText = styled.p`
-  color: #ffffff;
+  color: var(--white);
   font-family: var(--text);
   font-size: 1em;
   font-weight: 300;

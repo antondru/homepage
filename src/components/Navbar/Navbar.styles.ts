@@ -78,6 +78,7 @@ export const NavUnorderedList = styled.ul`
     @media (hover: none) { 
       font-weight: 400;
       text-shadow: none;
+      color: var(--offWhite);
     }
   }
 
