@@ -43,7 +43,7 @@ export const Card = styled.div<CardProps>`
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    height: 14em;
+    height: 12em;
     border: 2px solid var(--darkGrey);
     border-radius: 3px; 
     background-image: url(${props => props.backgroundImage});
@@ -85,7 +85,7 @@ export const CardContent = styled.div`
     
     /* If the device is able to hover (like with a mouse), card animations will "play" */
     @media (hover) {
-        transform: translateY(65%);
+        transform: translateY(60%);
         transition: transform 500ms ease;
 
         ${Card}:hover & {

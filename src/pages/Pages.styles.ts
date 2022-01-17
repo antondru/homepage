@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+/* did this to be able to "flip" the upwards scroll text */
+type VerticalLinkContainerProps = {
+  upwards: boolean;
+}
+
 export const StyledText = styled.p`
   color: var(--white);
   font-family: var(--text);
@@ -32,12 +37,26 @@ export const ErrorMessage = styled.p`
   }
 `;
 
+/* did this to be able to "flip" the upwards scroll text */
+export const VerticalLinkContainer = styled.div<VerticalLinkContainerProps>`
+  width: 20px;
+  height: 60px;
+  line-height: 20px;
+  text-align: center;
+  transform: rotate(${props => props.upwards ? '180deg' : ''});
+  margin-bottom: ${props => props.upwards ? '35px' : ''};
+  margin-top: ${props => props.upwards ? '' : '35px'};
+
+  @media (hover: none) {
+    display: none;
+  }
+`;
+
 export const VerticalLink = styled.a`
   letter-spacing: 0.1em;
   cursor: pointer;
   display: inline-block;
   font-size: 0.8em;
-  padding-left: 2em;
   color: var(--medGrey);
   writing-mode: vertical-rl;
   text-orientation: mixed;

@@ -1,4 +1,4 @@
-import { VerticalLink } from "../../pages/Pages.styles";
+import { VerticalLink, VerticalLinkContainer } from "../../pages/Pages.styles";
 import { ContentDiv, SectionHeader, BlinkingLetter, StyledLetter } from "./PageSection.styles";
 
 type Props = {
@@ -19,7 +19,9 @@ const PageSection: React.FC<Props> = ({ title, id, children, firstSection, lastS
   return (
     <section className="page-section" id={id}>
       {firstSection ? '' : 
-        <VerticalLink onClick={() => scrollToElement(`${scrollUpTo}`)} style={{paddingBottom: '15px'}}><span style={{color: '#03fcad'}}>🡠 </span>scroll</VerticalLink>
+      <VerticalLinkContainer upwards={true}>
+        <VerticalLink onClick={() => scrollToElement(`${scrollUpTo}`)}>scroll <span style={{color: '#03fcad'}}>🡢</span></VerticalLink>
+      </VerticalLinkContainer>
       }
       <ContentDiv className="content">
         <SectionHeader>
@@ -30,7 +32,9 @@ const PageSection: React.FC<Props> = ({ title, id, children, firstSection, lastS
         {children}
       </ContentDiv>
       {lastSection ? '' : 
-        <VerticalLink onClick={() => scrollToElement(`${scrollDownTo}`)} style={{paddingTop: '35px'}}>scroll<span style={{color: '#03fcad'}}> 🡢</span></VerticalLink>
+        <VerticalLinkContainer upwards={false}>
+          <VerticalLink onClick={() => scrollToElement(`${scrollDownTo}`)}>scroll<span style={{color: '#03fcad'}}> 🡢</span></VerticalLink>
+        </VerticalLinkContainer>
       }
     </section>
     
