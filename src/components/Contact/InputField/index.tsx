@@ -15,7 +15,7 @@ type Props = {
 const Input = ({ placeholder, type, value, onChange, name, id, label, onBlur }: Props) => {
   return (
     <>
-      <StyledLabel htmlFor={id}>{label}</StyledLabel>
+      <StyledLabel htmlFor={id}>{label}:</StyledLabel>
       <div className="input">
         <StyledInput
           onBlur={(e) => onBlur(e)}

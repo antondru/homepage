@@ -25,7 +25,8 @@ export const StyledInput = styled.input`
 
 export const StyledLabel = styled.label`
   font-family: var(--text);
-  color: var(--offWhite);
+  color: var(--lightGreen);
+  font-weight: 400;
   font-size: 0.8em;
   width: 50px;
 

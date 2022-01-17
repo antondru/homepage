@@ -138,7 +138,7 @@ export const Contact = (): JSX.Element => {
         /> 
         <InputContainer className="input-container"> 
           <Input
-            label="Name:"
+            label="Name"
             id="nameField"
             type={"text"}
             name='from_name'
@@ -165,11 +165,11 @@ export const Contact = (): JSX.Element => {
         </InputContainer>
         <InputContainer className="input-container">
           <Input
-            label="Email:"
+            label="Email"
             id="emailField"
             type={"text"}
             name='reply_to'
-            placeholder='example@mail.com...'
+            placeholder='your@email.com...'
             value={toSend.reply_to}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
               setMessageSent(false);
@@ -191,7 +191,7 @@ export const Contact = (): JSX.Element => {
           </ErrorMsgContainerInputField>
         </InputContainer>
         <MessageField
-          label="Message:" 
+          label="Message" 
           id="messageField"
           value={toSend.message}
           placeholder='Your message...'
