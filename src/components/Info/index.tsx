@@ -15,13 +15,13 @@ export const Info = () => {
       <TextContainer>
         <SubHeader>Welcome</SubHeader>
         <StyledText>
-          Hi, I'm Anton! I'm from Luleå, Sweden. On this page, you can see some of my <StyledLink onClick={() => {scrollToElement("projects")}}>projects</StyledLink>.
+          Hi, I'm Anton! On this page, you can see some of my <StyledLink onClick={() => {scrollToElement("projects")}}>projects</StyledLink>.
           <br />
           You can also visit my <StyledLink href="https://github.com/antondru" target="_blank" rel="noopener noreferrer"> GitHub</StyledLink> or drop me a message on 
           <StyledLink href="https://www.linkedin.com/in/anton-drugge-90304a83/" target="_blank" rel="noopener noreferrer"> LinkedIn</StyledLink>!
           <br />
           <br />
-          You can also <StyledLink onClick={() => {scrollToElement("contact")}}>contact</StyledLink> me by sending a message!
+          If you'd like, you can <StyledLink onClick={() => {scrollToElement("contact")}}>contact</StyledLink> me by sending a message!
         </StyledText>
       </TextContainer>
       <MediaContainer className="media-container">
