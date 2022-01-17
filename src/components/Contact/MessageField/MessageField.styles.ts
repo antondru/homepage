@@ -40,8 +40,8 @@ export const StyledTextArea = styled.textarea`
 
     &:focus {
         outline: none;
-        border-color: var(--offWhite);
-        box-shadow: 0 0 1px var(--offWhite);
+        border-color: var(--lightGreen);
+        box-shadow: 0 0 1px var(--lightGreen);
         transition: border-color 0.5s ease-in-out;
     }
 

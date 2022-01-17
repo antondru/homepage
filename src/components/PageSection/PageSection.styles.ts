@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const SectionHeader = styled.h1`
+  text-transform: uppercase;
   font-size: 4em;
   font-weight: 600;
   font-family: var(--heading);
@@ -38,6 +39,7 @@ export const StyledLetter = styled.span`
 `;
 
 export const SubHeader = styled.h2`
+  text-transform: uppercase;
   margin: 0;
   font-size: 1.5em;
   font-weight: 600;
@@ -77,24 +79,4 @@ export const ContentDiv = styled.div`
       padding: 0;
     }
 
-`;
-
-export const BlinkingLetter = styled.span`
-    color: var(--lightGreen);
-    animation: animate 0.8s linear infinite;
-    text-shadow: 0 0 5px var(--lightGreen);
-
-    @keyframes animate {
-        0% {
-            opacity: 0;
-        }
-
-        50% {
-            opacity: 0.7;
-        }
-
-        100% {
-            opacity: 0;
-        }
-    }
 `;

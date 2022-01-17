@@ -39,7 +39,7 @@ export const FrontPage = () => {
 
   return (
   <>
-    <PageSection title="info" id="info" firstSection={true} lastSection={false} scrollDownTo="projects">
+    <PageSection title="hello" id="info" firstSection={true} lastSection={false} scrollDownTo="projects">
       <Info />
     </PageSection>
     <PageSection title="projects" id="projects" firstSection={false} lastSection={false} scrollDownTo="contact" scrollUpTo="info">

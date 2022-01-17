@@ -1,5 +1,5 @@
 import { VerticalLink, VerticalLinkContainer } from "../../pages/Pages.styles";
-import { ContentDiv, SectionHeader, BlinkingLetter, StyledLetter } from "./PageSection.styles";
+import { ContentDiv, SectionHeader, StyledLetter } from "./PageSection.styles";
 
 type Props = {
   scrollUpTo?: string,
@@ -25,9 +25,8 @@ const PageSection: React.FC<Props> = ({ title, id, children, firstSection, lastS
       }
       <ContentDiv className="content">
         <SectionHeader>
-          <StyledLetter>/</StyledLetter>
           {title}
-          <BlinkingLetter>.</BlinkingLetter>
+          <StyledLetter> ⇩</StyledLetter>
         </SectionHeader>
         {children}
       </ContentDiv>
