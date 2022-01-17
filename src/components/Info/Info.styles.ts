@@ -7,8 +7,8 @@ export const Img = styled.img`
     border-radius: 50%;
         
     @media (max-width: 640px) {
-        height: 75px;
-        width: 75px;
+        height: 125px;
+        width: 125px;
     }
 `;
 

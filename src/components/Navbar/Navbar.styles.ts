@@ -17,7 +17,7 @@ export const Wrapper = styled.div`
   @media screen and (max-width: 1024px) {
     justify-content: center; 
     height: 4vh;
-    background-color: #141517;
+    background-color: black;
     /* padding-bottom: 0; */
   }
 

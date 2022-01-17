@@ -67,7 +67,7 @@ p {
   }
 
   .page-section.show {
-    transform: translateX(10px); 
+    transform: translateX(20px); 
     opacity: 1;
   }
 }
