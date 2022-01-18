@@ -14,8 +14,22 @@ export const SectionContainer = styled.div`
 
   @media (hover: none) {
     gap: 20vh;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+
+    @media (min-width: 768px) {
+      gap: 40vh;
+      padding-left: 5vh;
+      padding-top: 20vh;
+      padding-bottom: 20vh;
+    }
+
+    @media (min-width: 820px) {
+      gap: 45vh;
+      padding-left: 5vh;
+      padding-top: 20vh;
+      padding-bottom: 20vh;
+    }
   }
 `;
 
