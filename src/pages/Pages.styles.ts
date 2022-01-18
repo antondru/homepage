@@ -19,10 +19,10 @@ export const SectionContainer = styled.div`
 `;
 
 export const TextContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-bottom: 1em;
 `;
 
 export const StyledText = styled.p`
@@ -37,16 +37,16 @@ export const StyledText = styled.p`
 `;
 
 export const StyledLink = styled.a`
-    color: var(--lightGreen);
-    text-decoration: none;
+  color: var(--lightGreen);
+  text-decoration: none;
 
-    @media (hover) {
-      &:hover {
-        text-shadow: 0 0 10px var(--lightGreen);
-        transition: 0.5s ease-in-out;
-        cursor: pointer;
-      }
+  @media (hover) {
+    &:hover {
+      text-shadow: 0 0 10px var(--lightGreen);
+      transition: 0.5s ease-in-out;
+      cursor: pointer;
     }
+  }
 `;
 
 export const ErrorMessage = styled.p`

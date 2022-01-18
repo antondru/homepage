@@ -11,8 +11,8 @@ type NavIconLinkProps = {
 
 export const NavMenuIconLink = ({ icon, href, target, rel, title } : NavIconLinkProps) => {
   return (
-      <NavIconLink href={href} target={target} rel={rel} title={title}>
-        {icon}
-      </NavIconLink>
+    <NavIconLink href={href} target={target} rel={rel} title={title}>
+      {icon}
+    </NavIconLink>
   );
 };

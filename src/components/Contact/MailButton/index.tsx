@@ -8,8 +8,8 @@ type Props = {
 
 export const MailButton = ({ type, desc, disabled } : Props) => {
   return (
-      <StyledMailButton disabled={disabled} type={type}> 
-        {desc}
-      </StyledMailButton>
+    <StyledMailButton disabled={disabled} type={type}> 
+      {desc}
+    </StyledMailButton>
   );
 };

@@ -55,13 +55,13 @@ export const SectionHeader = styled.h1`
 `;
 
 export const StyledLetter = styled.span`
-    background-color: var(--lightGreen);
-    background-image: linear-gradient(45deg, var(--darkGreen), var(--lightGreen));
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    -moz-text-fill-color: transparent;
+  background-color: var(--lightGreen);
+  background-image: linear-gradient(45deg, var(--darkGreen), var(--lightGreen));
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
 `;
 
 export const SubHeader = styled.h2`
@@ -84,22 +84,21 @@ export const SubHeader = styled.h2`
 `;
 
 export const ContentDiv = styled.div`
-    border: 1px solid var(--darkGrey);
-    border-radius: 3px;
-    padding-top: 2vw;
-    display: flex;
-    flex-direction: column;
-    gap: 2em;
-    background: #141414; 
-    width: 100%; 
-    padding: 1em 1em 1em 1em;
+  border: 1px solid var(--darkGrey);
+  border-radius: 3px;
+  padding-top: 2vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  background: #141414; 
+  width: 100%; 
+  padding: 1em 1em 1em 1em;
 
-    @media (hover: none) {
-      gap: 0.7em;
-      background: none;
-      box-shadow: none;
-      margin-top: 1em;
-      width: 150%;
-    }
-
+  @media (hover: none) {
+    gap: 0.7em;
+    background: none;
+    box-shadow: none;
+    margin-top: 1em;
+    width: 150%;
+  }
 `;
