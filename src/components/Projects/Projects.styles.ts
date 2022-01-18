@@ -10,13 +10,6 @@ export const ProjectsContainer = styled.div`
     flex-direction: column;
 `;
 
-export const TextContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-bottom: 1em;
-`;
-
 /* Container for card */
 export const CardContainer = styled.div`
     width: 100%;
