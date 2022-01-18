@@ -17,6 +17,7 @@ export const SectionContainer = styled.div`
     padding-top: 5vh;
     padding-bottom: 5vh;
 
+    /* tablets */
     @media (min-width: 768px) {
       gap: 40vh;
       padding-left: 5vh;
@@ -24,6 +25,7 @@ export const SectionContainer = styled.div`
       padding-bottom: 20vh;
     }
 
+    /* tablets */
     @media (min-width: 820px) {
       gap: 45vh;
       padding-left: 5vh;
