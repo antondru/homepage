@@ -1,6 +1,6 @@
 import { StyledLink, StyledText } from "../../pages/Pages.styles";
 import IconLink from "./IconLink";
-import { IconContainer, ImageContainer, Img, InfoContainer, MediaContainer, TextContainer } from "./Info.styles";
+import { IconContainer, ImageContainer, Img, InfoContainer, MediaContainer, InfoTextContainer } from "./Info.styles";
 import placeholder from "../../images/Placeholder.png"
 import { StyledLetter, SubHeader } from "../PageSection/PageSection.styles";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
@@ -12,7 +12,7 @@ export const Info = () => {
   
   return (
     <InfoContainer className="info-container">
-      <TextContainer className="info-text-container">
+      <InfoTextContainer className="info-text-container">
         <SubHeader className="subheader"><StyledLetter>Welcome</StyledLetter></SubHeader>
         <StyledText>
           Hi, I'm Anton! On this page (which isn't entirely finished, by the way), you can see some of my <StyledLink onClick={() => {scrollToElement("projects")}}>projects</StyledLink>.
@@ -23,7 +23,7 @@ export const Info = () => {
           <br />
           If you'd like, you can <StyledLink onClick={() => {scrollToElement("contact")}}>contact</StyledLink> me by sending a message!
         </StyledText>
-      </TextContainer>
+      </InfoTextContainer>
       <MediaContainer className="media-container">
         <ImageContainer className="image-container"> 
           <Img src={placeholder} alt="profilepic" height='150px' width='150px' />

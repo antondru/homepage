@@ -23,7 +23,7 @@ export const InfoContainer = styled.div`
     }
 `;
 
-export const TextContainer = styled.div`
+export const InfoTextContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
