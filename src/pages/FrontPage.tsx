@@ -4,6 +4,7 @@ import { Contact } from "../components/Contact";
 import { Projects } from "../components/Projects";
 import { Info } from "../components/Info";
 import { Navbar } from "../components/Navbar";
+import { SectionContainer } from "./Pages.styles";
 
 export const FrontPage = () => {
 
@@ -11,7 +12,6 @@ export const FrontPage = () => {
     const sections = document.querySelectorAll(".page-section")
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
-        console.log(entry.target)
         entry.target.classList.toggle("show", entry.isIntersecting);
         handleNavBar(entry);
       });
@@ -38,17 +38,19 @@ export const FrontPage = () => {
   }
 
   return (
-  <>
-    <PageSection title="hello" id="info" firstSection={true} lastSection={false} scrollDownTo="projects">
-      <Info />
-    </PageSection>
-    <PageSection title="projects" id="projects" firstSection={false} lastSection={false} scrollDownTo="contact" scrollUpTo="info">
-      <Projects />
-    </PageSection>
-    <PageSection title="contact" id="contact" firstSection={false} lastSection={true} scrollUpTo="projects">
-      <Contact />
-    </PageSection>
+    <>
+    <SectionContainer className="section-container">
+      <PageSection title="hello" id="info" firstSection={true} lastSection={false} scrollDownTo="projects">
+        <Info />
+      </PageSection>
+      <PageSection title="projects" id="projects" firstSection={false} lastSection={false} scrollDownTo="contact" scrollUpTo="info">
+        <Projects />
+      </PageSection>
+      <PageSection title="contact" id="contact" firstSection={false} lastSection={true} scrollUpTo="projects">
+        <Contact />
+      </PageSection>
+    </SectionContainer>
     <Navbar /> 
-  </>
+    </>
   );
 }

@@ -5,6 +5,19 @@ type VerticalLinkContainerProps = {
   upwards: boolean;
 }
 
+export const SectionContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 8vh;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+
+  @media (hover: none) {
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+  }
+`;
+
 export const StyledText = styled.p`
   color: var(--white);
   font-family: var(--text);

@@ -28,9 +28,8 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     .page-section {
-        padding-top: 2vw;
         width: 50vw;
-        height: 94vh; 
+        height: fit-content; 
         transform: translateX(300px);
         opacity: 0;
         transition: 500ms;
@@ -48,7 +47,6 @@ export const GlobalStyle = createGlobalStyle`
 
     @media (max-width: 1024px) {
         .page-section {
-            height: 94vh; 
             padding-left: 0;
             padding-top: 0;
             transform: translateX(50px);

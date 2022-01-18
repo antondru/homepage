@@ -76,9 +76,9 @@ export const NavUnorderedList = styled.ul`
 
     // fix for now until I implement hamburger menu since the active class doesn't work well on mobile with the intersection observer etc. doesn't highlight nav items on scroll on mobile devices.
     @media (hover: none) { 
-      font-weight: 400;
+      font-weight: 600;
       text-shadow: none;
-      color: var(--offWhite);
+      color: var(--lightGreen);
     }
   }
 

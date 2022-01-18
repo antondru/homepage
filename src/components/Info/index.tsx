@@ -15,7 +15,7 @@ export const Info = () => {
       <TextContainer>
         <SubHeader><StyledLetter>Welcome</StyledLetter></SubHeader>
         <StyledText>
-          Hi, I'm Anton! On this page (which isn't entirely finished, by the way 😉), you can see some of my <StyledLink onClick={() => {scrollToElement("projects")}}>projects</StyledLink>.
+          Hi, I'm Anton! On this page (which isn't entirely finished, by the way), you can see some of my <StyledLink onClick={() => {scrollToElement("projects")}}>projects</StyledLink>.
           <br />
           You can also visit my <StyledLink href="https://github.com/antondru" target="_blank" rel="noopener noreferrer"> GitHub</StyledLink> or drop me a message on 
           <StyledLink href="https://www.linkedin.com/in/anton-drugge-90304a83/" target="_blank" rel="noopener noreferrer"> LinkedIn</StyledLink>!

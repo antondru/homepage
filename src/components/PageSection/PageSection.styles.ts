@@ -64,7 +64,7 @@ export const ContentDiv = styled.div`
     flex-direction: column;
     gap: 2em;
     background: #141414; 
-    width: 100%; // kolla på detta
+    width: 100%; 
     padding: 1em 1em 1em 1em;
 
     @media (hover: none) {
