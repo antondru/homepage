@@ -38,10 +38,12 @@ export const SectionHeader = styled.h1`
   color: var(--offWhite);
   margin: 0;
 
-  // TODO: effekter på rubrik... senare kanske
-  /* &:hover {
-
-    } */
+  @media (hover) {
+    &:hover {
+      text-shadow: 0 0 5px var(--lightGreen);
+      transition: 0.5s ease-in-out;
+    }
+  }
 
   @media (max-width: 1024px) {
     font-size: 3em;

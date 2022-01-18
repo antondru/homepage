@@ -5,9 +5,11 @@ export const StyledIconLink = styled.a`
     text-decoration: none;
     color: var(--offWhite);
     
-    &:hover {
-        color: var(--lightGreen);
-        transition: 0.5s ease-in-out;
+    @media (hover) {
+        &:hover {
+            color: var(--lightGreen);
+            transition: 0.5s ease-in-out;
+        }
     }
 
     @media (max-width: 640px) {

@@ -40,10 +40,12 @@ export const StyledLink = styled.a`
     color: var(--lightGreen);
     text-decoration: none;
 
-    &:hover {
-      text-shadow: 0 0 10px var(--lightGreen);
-      transition: 0.5s ease-in-out;
-      cursor: pointer;
+    @media (hover) {
+      &:hover {
+        text-shadow: 0 0 10px var(--lightGreen);
+        transition: 0.5s ease-in-out;
+        cursor: pointer;
+      }
     }
 `;
 
