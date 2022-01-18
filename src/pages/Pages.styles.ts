@@ -8,7 +8,7 @@ type VerticalLinkContainerProps = {
 export const SectionContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 8vh;
+  gap: 5vh;
   padding-top: 5vh;
   padding-bottom: 5vh;
 

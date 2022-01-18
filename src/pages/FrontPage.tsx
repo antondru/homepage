@@ -13,10 +13,14 @@ export const FrontPage = () => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         entry.target.classList.toggle("show", entry.isIntersecting);
-        handleNavBar(entry);
+
+        if (entry.intersectionRatio > 0.7) {
+          handleNavBar(entry);
+        }        
       });
     }, {
       threshold: 0.7, 
+      rootMargin: '100px'
     });
 
     sections.forEach(section => {
