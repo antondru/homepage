@@ -18,6 +18,13 @@ export const SectionContainer = styled.div`
   }
 `;
 
+export const TextContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-bottom: 1em;
+`;
+
 export const StyledText = styled.p`
   color: var(--white);
   font-family: var(--text);

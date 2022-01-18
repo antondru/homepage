@@ -21,23 +21,23 @@ const PageSection: React.FC<Props> = ({ title, id, children, firstSection, lastS
   return (
     <section className="page-section" id={id}>
       {firstSection ? '' : 
-      <VerticalLinkContainer upwards={true}>
-        <VerticalLink onClick={() => scrollToElement(`${scrollUpTo}`)}>scroll <span style={{color: '#03fcad'}}>🡢</span></VerticalLink>
+      <VerticalLinkContainer className="vertical-link-container" upwards={true}>
+        <VerticalLink className="vertical-link" onClick={() => scrollToElement(`${scrollUpTo}`)}>scroll <span style={{color: '#03fcad'}}>🡢</span></VerticalLink>
       </VerticalLinkContainer>
       }
       <ContentDiv className="content">
-        <SectionHeaderContainer>
-          <SectionHeader>
+        <SectionHeaderContainer className="section-header-container">
+          <SectionHeader className="section-header">
             {title}
             <StyledLetter>{" "}⇩</StyledLetter>
           </SectionHeader>
-          <Icon>{icon}</Icon>
+          <Icon className="icon">{icon}</Icon>
         </SectionHeaderContainer>
         {children}
       </ContentDiv>
       {lastSection ? '' : 
-        <VerticalLinkContainer upwards={false}>
-          <VerticalLink onClick={() => scrollToElement(`${scrollDownTo}`)}>scroll<span style={{color: '#03fcad'}}> 🡢</span></VerticalLink>
+        <VerticalLinkContainer className="vertical-link-container" upwards={false}>
+          <VerticalLink className="vertical-link" onClick={() => scrollToElement(`${scrollDownTo}`)}>scroll<span style={{color: '#03fcad'}}> 🡢</span></VerticalLink>
         </VerticalLinkContainer>
       }
     </section>

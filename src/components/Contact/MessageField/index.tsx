@@ -14,7 +14,7 @@ type Props = {
 
 export const MessageField = ({ placeholder, name, value, onChange, id, label, characterCount, onBlur }: Props) => {
   return (
-    <MessageContainer id="message-container">
+    <MessageContainer className="message-container">
       <StyledLabel htmlFor={id}>{label}:</StyledLabel>
       <TextAreaContainer className="textarea-container">
         <StyledTextArea

@@ -12,9 +12,9 @@ export const Navbar = () => {
     }
 
     return (
-        <Wrapper>
+        <Wrapper className='nav-wrapper'>
             <NavMenu className="navbar">
-                <NavUnorderedList>
+                <NavUnorderedList className="nav-ul">
                     <div className="nav-menu">
                         <li id="info" data-ref="info">
                             <StyledNavLink onClick={() => {scrollToElement("info")}}>Info</StyledNavLink>
@@ -28,7 +28,7 @@ export const Navbar = () => {
                     </div>    
                 </NavUnorderedList>
             </NavMenu>
-            <NavIconLinkContainer>
+            <NavIconLinkContainer className="nav-icon-link-container">
                 <NavMenuIconLink href="https://github.com/antondru" target="_blank" rel="noopener noreferrer" icon={<BsGithub />} title="GitHub"/>
                 <NavMenuIconLink href="https://www.linkedin.com/in/anton-drugge-90304a83/" target="_blank" rel="noopener noreferrer" icon={<BsLinkedin />} title="LinkedIn"/>
             </NavIconLinkContainer>

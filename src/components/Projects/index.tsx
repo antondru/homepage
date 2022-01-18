@@ -1,8 +1,8 @@
 import React from "react";
-import { StyledText } from "../../pages/Pages.styles";
+import { StyledText, TextContainer } from "../../pages/Pages.styles";
 import { StyledLetter, SubHeader } from "../PageSection/PageSection.styles";
 import { ProjectCard } from "./ProjectComponent";
-import { CardContainer, ProjectsContainer, TextContainer } from "./Projects.styles";
+import { CardContainer, ProjectsContainer } from "./Projects.styles";
 
 
 
@@ -11,12 +11,12 @@ export const Projects = () => {
   
   return (
     <ProjectsContainer className="projects-container">
-      <TextContainer>
+      <TextContainer className="text-container">
         <StyledText>
           You can check out my projects below. For now, there are just placeholders.
         </StyledText>
       </TextContainer>
-      <SubHeader><StyledLetter>My Projects</StyledLetter></SubHeader>
+      <SubHeader className="subheader"><StyledLetter>My Projects</StyledLetter></SubHeader>
       <CardContainer className="card-container">
         <ProjectCard backgroundImage={placeholder} title="Placeholder 1" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry." href="#"></ProjectCard>
         <ProjectCard backgroundImage={placeholder} title="Placeholder 2" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry." href="#"></ProjectCard>

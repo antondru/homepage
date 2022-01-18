@@ -12,8 +12,8 @@ export const Info = () => {
   
   return (
     <InfoContainer className="info-container">
-      <TextContainer>
-        <SubHeader><StyledLetter>Welcome</StyledLetter></SubHeader>
+      <TextContainer className="info-text-container">
+        <SubHeader className="subheader"><StyledLetter>Welcome</StyledLetter></SubHeader>
         <StyledText>
           Hi, I'm Anton! On this page (which isn't entirely finished, by the way), you can see some of my <StyledLink onClick={() => {scrollToElement("projects")}}>projects</StyledLink>.
           <br />

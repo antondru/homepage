@@ -1,10 +1,10 @@
 import { send } from "emailjs-com";
 import React, { useState } from "react";
-import { ErrorMessage, StyledText } from "../../pages/Pages.styles";
+import { ErrorMessage, StyledText, TextContainer } from "../../pages/Pages.styles";
 import Input from "./InputField";
 import { MailButton } from "./MailButton";
 import { MessageField } from "./MessageField";
-import { ButtonContainer, ContactContainer, ContactForm, ContactInfoText, ErrorMsgContainerInputField, ErrorMsgContainerMessageField, InputContainer, MessageSentText } from "./Contact.styles";
+import { ButtonContainer, ContactContainer, ContactForm, ErrorMsgContainerInputField, ErrorMsgContainerMessageField, InputContainer, MessageSentText } from "./Contact.styles";
 
 import {
   EMAILJS_USERID,
@@ -125,9 +125,9 @@ export const Contact = (): JSX.Element => {
 
   return (
     <ContactContainer id="contact-container">
-      <ContactInfoText className="contact-info-text-container">
+      <TextContainer className="text-container">
         <StyledText>Send me a message!</StyledText>
-      </ContactInfoText>
+      </TextContainer>
        <ContactForm className="contact-form" onSubmit={onSubmit}>
         {/* this field shouldnt be filled out - not really sure how well this works */}
         <input type='text' 
