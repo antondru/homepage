@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 export const StyledIconLink = styled.a`
-    font-size: 2em;
+    font-size: 1.8em;
     text-decoration: none;
     color: var(--offWhite);
     
     &:hover {
-        filter: drop-shadow(0 0 8px var(--lightGreen));
+        color: var(--lightGreen);
         transition: 0.5s ease-in-out;
     }
 

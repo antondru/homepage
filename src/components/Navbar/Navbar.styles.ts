@@ -44,7 +44,7 @@ export const NavIconLink = styled.a`
 
   @media (hover) {
     &:hover {
-      filter: drop-shadow(0 0 3px var(--lightGreen));
+      color: var(--lightGreen);
       transition: 0.5s ease-in-out;
     }
   }
