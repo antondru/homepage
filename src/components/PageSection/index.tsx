@@ -1,7 +1,9 @@
+import { IconBaseProps } from "react-icons/lib";
 import { VerticalLink, VerticalLinkContainer } from "../../pages/Pages.styles";
-import { ContentDiv, SectionHeader, StyledLetter } from "./PageSection.styles";
+import { ContentDiv, Icon, SectionHeader, SectionHeaderContainer, StyledLetter } from "./PageSection.styles";
 
 type Props = {
+  icon: IconBaseProps
   scrollUpTo?: string,
   scrollDownTo?: string,
   title: string,
@@ -11,7 +13,7 @@ type Props = {
   children?: JSX.Element,
 }
 
-const PageSection: React.FC<Props> = ({ title, id, children, firstSection, lastSection, scrollUpTo, scrollDownTo } : Props): JSX.Element => {
+const PageSection: React.FC<Props> = ({ title, id, children, firstSection, lastSection, scrollUpTo, scrollDownTo, icon } : Props): JSX.Element => {
   const scrollToElement = (targetElement: string) => {
     document.getElementById(targetElement)?.scrollIntoView({behavior: "smooth"});
   }
@@ -24,10 +26,13 @@ const PageSection: React.FC<Props> = ({ title, id, children, firstSection, lastS
       </VerticalLinkContainer>
       }
       <ContentDiv className="content">
-        <SectionHeader>
-          {title}
-          <StyledLetter> ⇩</StyledLetter>
-        </SectionHeader>
+        <SectionHeaderContainer>
+          <SectionHeader>
+            {title}
+            <StyledLetter>{" "}⇩</StyledLetter>
+          </SectionHeader>
+          <Icon>{icon}</Icon>
+        </SectionHeaderContainer>
         {children}
       </ContentDiv>
       {lastSection ? '' : 

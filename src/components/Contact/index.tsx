@@ -218,7 +218,7 @@ export const Contact = (): JSX.Element => {
         </ErrorMsgContainerMessageField>
         <ButtonContainer className="button-container">
           <MailButton disabled={!errorHandler.nameValid || !errorHandler.emailValid || !errorHandler.messageValid} type='submit' desc='SEND'></MailButton>
-          {messageSent ? <MessageSentText>Thank you for your message! &#128512;</MessageSentText> : ''};
+          {messageSent ? <MessageSentText>Thank you for your message! &#128512;</MessageSentText> : ''}
         </ButtonContainer>
       </ContactForm>
     </ContactContainer>

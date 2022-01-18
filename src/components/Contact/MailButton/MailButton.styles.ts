@@ -60,14 +60,4 @@ export const StyledMailButton = styled.button<Props>`
     @media (hover: none) {
         width: 50%;
     }
-
-    /* @media screen and (max-width: 1024px) {
-        width: 100%;
-        font-size: 0.8em;
-    }
-
-    @media screen and (max-width: 320px) {
-        width: 100%;
-        font-size: 0.7em;
-    } */
 `;

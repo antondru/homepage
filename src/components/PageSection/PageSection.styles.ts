@@ -1,5 +1,35 @@
 import styled from 'styled-components'
 
+export const SectionHeaderContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--darkGrey);
+  
+  @media (hover: none) {
+    border-bottom: none;
+  }
+`;
+
+export const Icon = styled.div`
+  opacity: 0.8;
+  color: var(--grey);
+  font-size: 4em;
+
+  @media (hover: none) {
+    opacity: 0.5;
+    color: var(--darkGrey);
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 3em;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 2.2em;
+  }
+`;
+
 export const SectionHeader = styled.h1`
   text-transform: uppercase;
   font-size: 4em;
@@ -7,16 +37,11 @@ export const SectionHeader = styled.h1`
   font-family: var(--heading);
   color: var(--offWhite);
   margin: 0;
-  border-bottom: 2px solid var(--darkGrey);
 
   // TODO: effekter på rubrik... senare kanske
   /* &:hover {
 
     } */
-
-  @media (hover: none) {
-    border-bottom: none;
-  }
 
   @media (max-width: 1024px) {
     font-size: 3em;
@@ -69,13 +94,10 @@ export const ContentDiv = styled.div`
 
     @media (hover: none) {
       gap: 0.7em;
-      border: none;
-      border-radius: none;
       background: none;
       box-shadow: none;
       margin-top: 1em;
       width: 150%;
-      padding: 0;
     }
 
 `;

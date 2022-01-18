@@ -4,7 +4,7 @@ export const Img = styled.img`
     height: 150px;
     width: 150px;
     border: 3px solid var(--darkGrey);
-    border-radius: 50%;
+    border-radius: 3px;
         
     @media (max-width: 640px) {
         height: 125px;
