@@ -13,6 +13,7 @@ export const SectionContainer = styled.div`
   padding-bottom: 5vh;
 
   @media (hover: none) {
+    gap: 20vh;
     padding-top: 1vh;
     padding-bottom: 1vh;
   }
