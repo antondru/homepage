@@ -1,4 +1,5 @@
 import { send } from "emailjs-com";
+import{ init } from '@emailjs/browser';
 import React, { useState } from "react";
 import { ErrorMessage, StyledText, TextContainer } from "../../pages/Pages.styles";
 import Input from "./InputField";
@@ -102,6 +103,7 @@ export const Contact = (): JSX.Element => {
   const onSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     if (errorHandler.randomFieldValid) { 
       e.preventDefault();
+      init(EMAILJS_USERID);
       send(
         EMAILJS_SERVICEID,
         EMAILJS_TEMPLATEID,
