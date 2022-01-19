@@ -101,9 +101,9 @@ export const Contact = (): JSX.Element => {
 
   // send email on submit
   const onSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
+    init(EMAILJS_USERID);
     if (errorHandler.randomFieldValid) { 
       e.preventDefault();
-      init(EMAILJS_USERID);
       send(
         EMAILJS_SERVICEID,
         EMAILJS_TEMPLATEID,
