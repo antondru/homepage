@@ -1,10 +1,10 @@
 import { Card, CardButton, CardContent, CardText, CardTitle } from "./Projects.styles";
 
 type Props = {
-  backgroundImage: string,
-  title: string,
-  text: string,
-  href: string
+  backgroundImage: string;
+  title: string;
+  text: string;
+  href: string;
 }
 
 export const ProjectCard = ({ backgroundImage, title, text, href } : Props) => {

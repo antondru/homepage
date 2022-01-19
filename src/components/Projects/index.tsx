@@ -7,7 +7,7 @@ import { CardContainer, ProjectsContainer } from "./Projects.styles";
 
 
 export const Projects = () => {
-  const placeholder = 'https://picsum.photos/350/450?grayscale'; // Fetches a random grayscale picture from picsum
+  const placeholder = 'https://picsum.photos/350/450?grayscale'; // Fetches a random grayscale picture from picsum (placeholder)
   
   return (
     <ProjectsContainer className="projects-container">

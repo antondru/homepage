@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 type CardProps = {
-    backgroundImage: string
+    backgroundImage: string;
 }
 
 /* Container for project section */

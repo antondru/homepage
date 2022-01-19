@@ -3,14 +3,14 @@ import { VerticalLink, VerticalLinkContainer } from "../../pages/Pages.styles";
 import { ContentDiv, Icon, SectionHeader, SectionHeaderContainer, StyledLetter } from "./PageSection.styles";
 
 type Props = {
-  icon: IconBaseProps
-  scrollUpTo?: string,
-  scrollDownTo?: string,
-  title: string,
-  id: string,
-  lastSection: boolean,
-  firstSection: boolean,
-  children?: JSX.Element,
+  icon: IconBaseProps;
+  scrollUpTo?: string;
+  scrollDownTo?: string;
+  title: string;
+  id: string;
+  lastSection: boolean;
+  firstSection: boolean;
+  children?: JSX.Element;
 }
 
 const PageSection: React.FC<Props> = ({ title, id, children, firstSection, lastSection, scrollUpTo, scrollDownTo, icon } : Props): JSX.Element => {

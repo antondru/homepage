@@ -13,23 +13,23 @@ import {
 } from '../../config';
 
 type InputFieldValues = {
-  from_name: string
-  message: string
-  reply_to: string
+  from_name: string;
+  message: string;
+  reply_to: string;
 }
 
 type Error = {
-  isError: boolean
-  emailValid: boolean
-  nameValid: boolean
-  messageValid: boolean
-  randomFieldValid: boolean // for catching spam
+  isError: boolean;
+  emailValid: boolean;
+  nameValid: boolean;
+  messageValid: boolean;
+  randomFieldValid: boolean; // for catching spam
 }
 
 type hasBeenTargeted = {
-  nameFieldTargeted: boolean
-  emailFieldTargeted: boolean
-  messageFieldTargeted: boolean
+  nameFieldTargeted: boolean;
+  emailFieldTargeted: boolean;
+  messageFieldTargeted: boolean;
 }
 
 export const Contact = (): JSX.Element => {
@@ -68,47 +68,55 @@ export const Contact = (): JSX.Element => {
   }
 
   // simple email validation
-  const validateEmail = (email: string): boolean => {
-    //let email = (document.getElementById("emailField") as HTMLInputElement).value;
+  const validateEmail = (email: string): void => {
     const regexp = /\S+@\S+\.\S+/;
-    return regexp.test(email);
+    if (regexp.test(email)) {
+      setErrorHandler({...errorHandler, emailValid: true });
+    }
+    else {
+      setErrorHandler({...errorHandler, emailValid: false, isError: true });
+    }
   }
 
-  // simple name validation (atleast 2 letters)
-  const validateName = (name: string): boolean => {
-    if (name.length >= 2) {
-      return true;
+  // simple name validation (min 2 max 35 letters)
+  const validateName = (name: string): void => {
+    if (name.length >= 2 && name.length <= 35) {
+      setErrorHandler({...errorHandler, nameValid: true});
     }
-    return false;
+    else {
+      setErrorHandler({...errorHandler, nameValid: false, isError: true});
+    }
   }
 
   // simple message validation (atleast 4 letters)
-  const validateMessage = (message: string): boolean => {
+  const validateMessage = (message: string): void => {
     if (message.length >= 4) {
-      return true;
+      setErrorHandler({...errorHandler, messageValid: true });
     }
-    return false
+    else {
+      setErrorHandler({...errorHandler, messageValid: false, isError: true });
+    }
   }
 
   // send email on submit
   const onSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     if (errorHandler.randomFieldValid) { 
-          e.preventDefault();
-          send(
-            EMAILJS_SERVICEID,
-            EMAILJS_TEMPLATEID,
-            toSend,
-            EMAILJS_USERID
-          ) 
-          .then((response: any) => {
-            console.log('SUCCESS!', response.status, response.text);
-          })
-          .catch((err: any) => {
-            console.log('FAILED...', err);
-          });
-          setMessageSent(true);
-          resetForm();
-        }
+      e.preventDefault();
+      send(
+        EMAILJS_SERVICEID,
+        EMAILJS_TEMPLATEID,
+        toSend,
+        EMAILJS_USERID
+      ) 
+      .then((response: any) => {
+        console.log('SUCCESS!', response.status, response.text);
+      })
+      .catch((err: any) => {
+        console.log('FAILED...', err);
+      });
+      setMessageSent(true);
+      resetForm();
+    }
     else {
       e.preventDefault();
       resetForm();
@@ -131,9 +139,9 @@ export const Contact = (): JSX.Element => {
        <ContactForm className="contact-form" onSubmit={onSubmit}>
         {/* this field shouldnt be filled out - not really sure how well this works */}
         <input type='text' 
-        id="phone"
-        onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-          validateRandomField(e.target.value);
+          id="phone"
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+            validateRandomField(e.target.value);
           }}
         /> 
         <InputContainer className="input-container"> 
@@ -147,20 +155,15 @@ export const Contact = (): JSX.Element => {
             onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
               setMessageSent(false);
               setToSend({ ...toSend, [e.target.name]: e.target.value });
+              validateName(e.target.value);
             }}
             onBlur={(e: React.FocusEvent<HTMLInputElement>) => {
               setWasTargeted({...wasTargeted, nameFieldTargeted: true})
-              let nameValid:boolean = validateName(e.target.value);
-              if (nameValid) {          
-                setErrorHandler({...errorHandler, nameValid: true});
-              }
-              else {
-                setErrorHandler({...errorHandler, nameValid: false, isError: true});
-              }
+              validateName(e.target.value);
             }}
           />
           <ErrorMsgContainerInputField className="error-message-container-input-field">
-            {errorHandler.isError && wasTargeted.nameFieldTargeted && !errorHandler.nameValid ? <ErrorMessage>* Name needs to be atleast two characters!</ErrorMessage> : ''}
+            {errorHandler.isError && wasTargeted.nameFieldTargeted && !errorHandler.nameValid ? <ErrorMessage>* Name needs to be between 2-35 characters!</ErrorMessage> : ''}
           </ErrorMsgContainerInputField>
         </InputContainer>
         <InputContainer className="input-container">
@@ -174,16 +177,11 @@ export const Contact = (): JSX.Element => {
             onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
               setMessageSent(false);
               setToSend({ ...toSend, [e.target.name]: e.target.value });
+              validateEmail(e.target.value);
             }}
             onBlur={(e: React.FocusEvent<HTMLInputElement>) => {
               setWasTargeted({...wasTargeted, emailFieldTargeted: true})
-              let emailValid:boolean = validateEmail(e.target.value);
-              if (emailValid) {          
-                setErrorHandler({...errorHandler, emailValid: true })
-              }
-              else {
-                setErrorHandler({...errorHandler, emailValid: false, isError: true })
-              }
+              validateEmail(e.target.value);
             }}
           />
           <ErrorMsgContainerInputField className="error-message-container-input-field">
@@ -200,16 +198,11 @@ export const Contact = (): JSX.Element => {
             setMessageSent(false);
             setCharacterCount(e.target.value.length);
             setToSend({ ...toSend, [e.target.name]: e.target.value });
+            validateMessage(e.target.value);
           }}
           onBlur={(e: React.FocusEvent<HTMLInputElement>) => {
             setWasTargeted({...wasTargeted, messageFieldTargeted: true});
-            let messageValid:boolean = validateMessage(e.target.value);
-            if (messageValid) {          
-              setErrorHandler({...errorHandler, messageValid: true });
-            }
-            else {
-              setErrorHandler({...errorHandler, messageValid: false, isError: true });
-            }
+            validateMessage(e.target.value);
           }}
           characterCount={characterCount}
         />

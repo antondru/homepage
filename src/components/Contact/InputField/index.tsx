@@ -25,7 +25,7 @@ const Input = ({ placeholder, type, value, onChange, name, id, label, onBlur }: 
           placeholder={placeholder}
           onChange={(e) => onChange(e)}
           value={value}
-          maxLength={50}
+          maxLength={35}
         />
       </div>
       </>

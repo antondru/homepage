@@ -1,9 +1,9 @@
 import { StyledMailButton } from "./MailButton.styles";
 
 type Props = {
-  desc: string
+  desc: string;
   type?: 'submit' | 'reset' | 'button';
-  disabled: boolean
+  disabled: boolean;
 }
 
 export const MailButton = ({ type, desc, disabled } : Props) => {
