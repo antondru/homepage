@@ -8,7 +8,7 @@ import { Wrapper, NavUnorderedList, NavMenu, StyledNavLink, NavIconLinkContainer
 
 export const Navbar = () => {
     const scrollToElement = (targetElement: string) => {
-        document.getElementById(targetElement)?.scrollIntoView({behavior: "smooth"}); // this "fixes" the bug in the navbar where it wont highlight the section being active
+        document.getElementById(targetElement)?.scrollIntoView({behavior: "smooth"});
     }
 
     return (
