@@ -1,4 +1,4 @@
-import { Card, CardButton, CardContent, CardText, CardTitle } from "./Projects.styles";
+import { Card, CardButton, CardContent, CardText, CardTitle } from "./ProjectComponent.styles";
 
 type Props = {
   backgroundImage: string;

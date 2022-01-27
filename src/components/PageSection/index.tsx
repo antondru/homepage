@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { IconBaseProps } from "react-icons/lib";
 import { VerticalLink, VerticalLinkContainer } from "../../pages/Pages.styles";
 import { ContentDiv, Icon, SectionHeader, SectionHeaderContainer, StyledLetter } from "./PageSection.styles";
@@ -14,6 +15,9 @@ type Props = {
 }
 
 const PageSection: React.FC<Props> = ({ title, id, children, firstSection, lastSection, scrollUpTo, scrollDownTo, icon } : Props): JSX.Element => {
+  const [showModal, setShowModal] = useState(false);
+  const toggleShowModal = () => setShowModal(p => !p);
+
   const scrollToElement = (targetElement: string) => {
     document.getElementById(targetElement)?.scrollIntoView({behavior: "smooth"});
   }
@@ -40,8 +44,7 @@ const PageSection: React.FC<Props> = ({ title, id, children, firstSection, lastS
           <VerticalLink className="vertical-link" onClick={() => scrollToElement(`${scrollDownTo}`)}>scroll<span style={{color: '#03fcad'}}> 🡢</span></VerticalLink>
         </VerticalLinkContainer>
       }
-    </section>
-    
+    </section> 
   );
 }
 
